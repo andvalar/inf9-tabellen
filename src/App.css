@@ -1,14 +1,17 @@
 #root {
+  color-scheme: dark light;
   --primary-color: #1ba098;
   --secondary-color: #deb992;
-  --tertiary-color: rgba(0,31,51,.9);
-  --background-color: #051622;
+  --desc-color: #869ba9;
+  --highlight-color: #081521;
+  --bg-color:  #001f33;
+  --bg-second-color:  #051622;
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
   color: var(--secondary-color);
-  font-family: Segoe UI, Roboto, Helvetica Neue, Arial, sans-serif;
+  font-family: Trebuchet MS, Segoe UI, Helvetica Neue, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
@@ -50,12 +53,39 @@
 }
 
 body {
-  background-color: var(--background-color);
+  background-color: var(--bg-color);
   background-image: url(./assets/bg_stars.png);
 }
 
 a {
   color: var(--primary-color);
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 6rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  margin: 1em 0 0 0;
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  letter-spacing: 0.2em;
+  margin-bottom: 5em;
+}
+
+my-nav {
+  display: block;
+  padding: 5em 0;
+  border-bottom:  1px solid var(--secondary-color);
+  text-align: left;
+}
+
+my-nav > a {
+  padding: 5em 2em;
 }
 
 prompt-line {
@@ -70,7 +100,7 @@ label {
   padding: 0.6em 1.2em;
   border-radius: 8px;
   border: 2px solid transparent;
-  background-color: var(--tertiary-color);
+  background-color: var(--bg-color);
   transition: border-color 0.25s;
 }
 
