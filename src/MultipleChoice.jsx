@@ -1,10 +1,9 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
 import './App.css'
 
 const clsx = (...classes) => classes.filter(Boolean).join(" ")
 
-export function Mc({ prompt, options:labels, correctOptions }) {  // options:labels bennent um
+export function MultipleChoice({ prompt, options:labels, correctOptions }) {  // options:labels bennent um
   const [options, setOptions] = useState(() => labels.map((label, index) =>    // () => damit als Fkt, die nur initial aufg wird
     ({ 
       label, 
