@@ -7,9 +7,9 @@ export function Nav() {
 
   return (
     <my-nav>
-      <a href="#">Link1</a>
-      <a href="#">Link2</a>
-      <a href="#">Link3</a>
+      <a href="#">Tabellendokumente</a>
+      <a href="#">Formeln</a>
+      <a href="#">Funktionen</a>
     </my-nav>
   )
 }

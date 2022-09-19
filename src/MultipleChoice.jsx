@@ -14,8 +14,9 @@ export function MultipleChoice({ prompt, options:labels, correctOptions }) {  //
   const [isSolutionVisible, setIsSolutionVisible] = useState(false)
 
   return (
-    <div>
+    <my-multiplechoice>
       <prompt-line>{ prompt }</prompt-line>
+      <flex-container>
       {options.map(({ label, selected, correct }, index) =>  // option destructured in die attr
         <label key={label} className={clsx(
             selected && "selected", 
@@ -31,7 +32,8 @@ export function MultipleChoice({ prompt, options:labels, correctOptions }) {  //
           {label}
         </label>
       )}
+      </flex-container>
       <button onClick={() => setIsSolutionVisible(true)} className="send">Prüfen</button>
-    </div>
+    </my-multiplechoice>
   )
 }
