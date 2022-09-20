@@ -9,8 +9,7 @@ export function Intro() {
   return (
     <my-intro>
       <h3>Tabellendokumente erstellen, verändern und formatieren</h3>
-      Ein Tabellenkalkulationsprogramm ist eine Software, mit der man Tabellen erstellen und verwalten kann. 
-      In diesem Tabellen kann der Computer automatische Berechnungen durchführen.
+      Mit Excel, Calc oder ähnlichen Programmen...
 
       <MultipleChoice 
         prompt={ "Wähle die Tabellenkalkulationsprogramme aus!" } 

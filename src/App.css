@@ -17,6 +17,10 @@
   line-height: 1.5;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -120,12 +124,13 @@ my-intro {
 
 my-entry  {
   margin:  15rem 0;
-  width: 100%;
+  width: 100vw;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
   padding: 2em 5em 6em 5em;
   background-color: var(--bg-color);
+  box-sizing: border-box;
 }
 
 my-entry h1, my-entry h2, my-entry h3{
