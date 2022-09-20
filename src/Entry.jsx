@@ -4,23 +4,25 @@ import './App.css'
 const clsx = (...classes) => classes.filter(Boolean).join(" ")
 
 export function Entry() {  
+  const imgUrl1 = "1-1-cell_row_column.png"
+  const imgUrl2 = "1-1-format_cell.png"
 
   return (
     <my-entry>
       <h1>Tabellendokumente</h1>
       <h2>Aufbau</h2>
       <flex-container>
-        <img src="src/assets/1-1-cell_row_column.png" />
+        <img src={ imgUrl1 } />  
         <div>
           Ein Tabellendokument kann aus mehreren Tabellen bestehen. 
-          Jede Tabelle enthält <span class="color-green">Zellen (hier: B4)</span>, die in <span class="color-blue">Zeilen (hier: 4)</span> und <span class="color-orange">Spalten (hier: B)</span> angeordnet sind.
+          Jede Tabelle enthält <span className="color-green">Zellen (hier: B4)</span>, die in <span className="color-blue">Zeilen (hier: 4)</span> und <span className="color-orange">Spalten (hier: B)</span> angeordnet sind.
           In einer Zelle kann ein Wert stehen.
         </div>
       </flex-container>
 
       <h2>Zellen formatieren</h2>
       <flex-container>
-        <img src="src/assets/1-1-format_cell.png" />
+        <img src={ imgUrl2 } />
         <div>
           Das Format einer Zelle bestimmt, wie der Inhalt dargestellt wird (z.B. als Dezimalzahl, Prozentangabe, Datum, Text...).
           Wir sprechen vom Datentyp der Zelle.<br /><br />

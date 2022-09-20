@@ -12,7 +12,7 @@ export function Topic() {
   return (
     <my-topic>
       <h2>Tabellenkalkulation</h2>
-      <div class="text">
+      <div className="text">
         Ein Tabellenkalkulationsprogramm ist eine Software, mit der man Tabellen erstellen und verwalten kann. 
         In diesem Tabellen kann der Computer automatische Berechnungen durchführen.
       </div>

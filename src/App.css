@@ -55,6 +55,7 @@
 body {
   background-color: var(--bg-color);
   background-image: url(./assets/bg_stars.png);
+  background-attachment: fixed;
 }
 
 a {

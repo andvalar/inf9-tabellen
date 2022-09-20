@@ -10,7 +10,7 @@ export function Task({ prompt, description, image, hasImage }) {
       <prompt-line>{ prompt }</prompt-line>
       <flex-container>
         { 
-          hasImage &&
+          image &&
             <img src={ image } />
         }
         <promt-description>{ description }</promt-description>

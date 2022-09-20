@@ -37,7 +37,7 @@ export function Lesson() {
         description={ 
           "Bearbeite dein erstes Tabellendokument. Am Ende soll es ähnlich aussehen, wie die Beispieltabelle hier. Du kannst dafür ein Thema deiner Wahl darstellen, oder einfach die Tabelle möglichst genau übernehmen. Achte dabei auf die Verwendung von Schriftart, -farbe und -größe, Hintergrundfarbe, Hervorhebungen und Text-Stile, Textausrichtung (auch vertikal!), Darstellungsformat (achte auf die Zahlen!) sowie Rahmen." 
         } 
-        image={ "src/assets/1-1-task1.png" }
+        image={ "1-1-task1.png" }
         hasImage="true"
       />
       <Task
