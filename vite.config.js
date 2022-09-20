@@ -6,5 +6,6 @@ export default defineConfig({
   server: {
     host: true
   },
+  base: "/inf9-tabellen/",
   plugins: [react()]
 })
