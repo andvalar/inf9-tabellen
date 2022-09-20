@@ -145,21 +145,36 @@ my-entry flex-container div {
   padding-left: 2em;
 } 
 
+my-task, my-multiplechoice {
+  margin: 15rem 0;
+}
+
+my-task flex-container img {
+  max-width: 60%;
+  flex: 1;
+}
+promt-description {
+  display: block;
+  flex: 2;
+  word-wrap: break-word;
+}
+
 prompt-line {
   display: block;
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 1em;
+  color: var(--primary-color);
 }
 
 label {
   padding: 1em 1.2em;
   border-radius: 8px;
-  border: 2px solid transparent;
+  border: 5px solid transparent;
   background-color: var(--bg-color);
   transition: border-color 0.25s;
   word-wrap: break-word;
-  max-width: 28%;
+  max-width: 27%;
 }
 
 flex-container {
@@ -189,12 +204,13 @@ button.send {
 }
 
 .selected {
-  border-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  color:  var(--bg-color);
 }
 
 .correct {
-  color:  green;
+  border-color:  green;
 }
 .incorrect {
-  color:  red;
+  border-color:  red;
 }
