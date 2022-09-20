@@ -155,7 +155,7 @@ my-task flex-container img {
 }
 promt-description {
   display: block;
-  flex: 2;
+  flex: 1;
   word-wrap: break-word;
 }
 
