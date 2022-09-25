@@ -9,7 +9,7 @@ export function Intro() {
   return (
     <my-intro>
       <h3>Tabellendokumente erstellen, verändern und formatieren</h3>
-      Mit Excel, Calc oder ähnlichen Programmen...
+      Hier lernst du, wie man mit Excel, Calc oder ähnlichen Programmen ein Tabellendokument erstellt, Inhalte verändert und Darstellung formatiert.
 
       <MultipleChoice 
         prompt={ "Wähle die Tabellenkalkulationsprogramme aus!" } 

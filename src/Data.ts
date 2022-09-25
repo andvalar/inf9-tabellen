@@ -1,10 +1,13 @@
+
+
+
 const topic = {
-  titel: "Tabellenkalkulation",
+  title: "Tabellenkalkulation",
   introHeading: "Tabellendokumente erstellen, verändern und formatieren",
   intro: `Ein Tabellenkalkulationsprogramm ist eine Software, mit der man Tabellen erstellen und verwalten kann. 
     In diesem Tabellen kann der Computer automatische Berechnungen durchführen.`,
   multipleChoice: [
-    
+
   ]
   entry: {
     heading: `Tabellendokumente`,
@@ -38,3 +41,4 @@ const topic = {
 }
 
 // markdown parser für react... mit color?
+

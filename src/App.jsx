@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Nav } from './Nav'
 import { Topic } from './Topic'
+import { BrowserRouter, Link, Routes, Route } from "react-router-dom"
 
 function App() {
   const [completed, setCompleted] = useState(0)

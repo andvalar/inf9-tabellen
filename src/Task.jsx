@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import './App.css'
+import { Hint } from './Hint'
 
 const clsx = (...classes) => classes.filter(Boolean).join(" ")
 
-export function Task({ prompt, description, image, hasImage }) {  
+export function Task({ prompt, description, image }) {  
 
   return (
     <my-task>
