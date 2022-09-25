@@ -1,20 +1,25 @@
 import { useState } from 'react'
 import './App.css'
-import { Nav } from './Nav'
-import { Topic } from './Topic'
-import { BrowserRouter, Link, Routes, Route } from "react-router-dom"
+import { LessonPage } from './Topic'
+import { Header, Footer } from './Outline'
+import { BrowserRouter, Link, Routes, Route, Navigate } from "react-router-dom"
 
 function App() {
   const [completed, setCompleted] = useState(0)
-  const [topic, setTopic] = ""
 
   return (
 
     <>
-      <Nav />
-      <h1>Informatik 9</h1>
-
-      <Topic />
+      <BrowserRouter basename="/inf9-tabellen">
+          <Header />
+            <Routes>
+              <Route path="lesson/:topic/:lesson" element={ <LessonPage /> } />
+              {/*<Route path="topics" element={ <ToC/> } />*/}
+              <Route path="/" element={ <Navigate to="lesson/tabellen/tabellendokumente" /> } />
+              <Route path="*" element={ "Not found" } />
+            </Routes>
+          <Footer />
+      </BrowserRouter>
     </>
   )
 }
