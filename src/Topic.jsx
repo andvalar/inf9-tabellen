@@ -67,8 +67,12 @@ const LessonSection = ({ content }) => {
 }
 
 
-const EntryView = ({ entry }) => {}
+const EntryView = ({ entry }) => {
+  
+}
 
 const ChoicesView = ({ choices }) => {}
 
-const ErorThingsBroken = () => {}
+const ErorThingsBroken = ({ message }) => {
+  return <error-message>{message}</error-message>
+}
