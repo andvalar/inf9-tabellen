@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import './App.css'
+import { data } from './Data'
 import { LessonPage } from './Topic'
 import { Header, Footer } from './Outline'
 import { BrowserRouter, Link, Routes, Route, Navigate } from "react-router-dom"
@@ -10,7 +11,7 @@ function App() {
   return (
 
     <>
-      <BrowserRouter basename="/inf9-tabellen">
+      <BrowserRouter basename={ `/${data.name}` }>
           <Header />
             <Routes>
               <Route path="lesson/:topic/:lesson" element={ <LessonPage /> } />

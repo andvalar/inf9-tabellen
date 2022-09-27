@@ -103,6 +103,9 @@ h1, h2, h3{
 .color-orange {
   color: darkorange;
 }
+my-header, my-footer {
+  display: block;
+}
 
 my-nav, my-topic, my-intro, my-entry, my-task, my-multiplechoice {
   display: block;
@@ -124,7 +127,7 @@ my-intro {
 
 my-entry  {
   margin:  15rem 0;
-  width: 100vw;
+  width: 98.9vw;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
