@@ -3,13 +3,14 @@
   --primary-color: #1ba098;
   --secondary-color: #deb992;
   --desc-color: #869ba9;
-  --highlight-color: #081521;
+  --bg-dark-color: #081521;
   --bg-color:  #001f33;
   --bg-second-color:  #051622;
+  --subtle-color: rgba(134,155,169,.5);
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0 2rem;
   color: var(--secondary-color);
   font-family: Trebuchet MS, Segoe UI, Helvetica Neue, Arial, sans-serif;
   font-size: 1.3rem;
@@ -54,6 +55,15 @@
 
 .invis {
   display: none;
+}
+
+.full-width {
+  margin-left:  0;
+  margin-right:  0;
+  width: 98.9vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 body {
@@ -107,6 +117,31 @@ my-header, my-footer {
   display: block;
 }
 
+my-footer {
+  margin: 8em 0 0 0;
+  background-color: var(--bg-second-color);
+  color: var(--subtle-color);
+  padding: 20rem 6rem 20rem 6rem;
+  letter-spacing: 0.2em;
+}
+my-footer > flex-container {
+  border-top: 1px solid var(--subtle-color);
+  padding: 2em 0;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  justify-content: start;
+  text-transform: uppercase;
+}
+my-footer .left {
+  flex: 1;
+}
+my-footer .right {
+  color: var(--desc-color);
+  flex: 2;
+  font-size: 0.8em;
+}
+
 my-nav, my-topic, my-intro, my-entry, my-task, my-multiplechoice {
   display: block;
   margin: 5rem 0;
@@ -122,15 +157,12 @@ my-nav > a {
 }
 
 my-intro {
-  margin: 15rem 0;
+  margin: 10rem 0 15rem 0;
+  color: var(--desc-color);
 }
 
 my-entry  {
   margin:  15rem 0;
-  width: 98.9vw;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
   padding: 2em 5em 6em 5em;
   background-color: var(--bg-color);
   box-sizing: border-box;
@@ -162,10 +194,19 @@ my-task flex-container img {
   max-width: 60%;
   flex: 1;
 }
+
+my-code {
+  font-family: monospace;
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+  padding: 0.3em;
+}
+
 promt-description {
   display: block;
   flex: 1;
   word-wrap: break-word;
+  color: var(--desc-color);
 }
 
 prompt-line {
@@ -173,7 +214,7 @@ prompt-line {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 1em;
-  color: var(--primary-color);
+  color: var(--secondary-color);
 }
 
 label {
@@ -181,9 +222,18 @@ label {
   border-radius: 8px;
   border: 5px solid transparent;
   background-color: var(--bg-color);
-  transition: border-color 0.25s;
+  transition: border-color 1s;
   word-wrap: break-word;
   max-width: 27%;
+}
+
+.pulse:hover, pulse:focus {
+  animation: pulse 1s;
+  box-shadow: 0 0 0 2em transparent;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--subtle-color); }
 }
 
 flex-container {
@@ -222,4 +272,9 @@ button.send {
 }
 .incorrect {
   border-color:  red;
+}
+
+nav {
+  border-top: 1px solid var(--secondary-color);
+  padding: 5em 0;
 }

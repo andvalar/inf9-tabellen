@@ -22,8 +22,11 @@ export function Header() {
 export function Footer() {  
 
   return (
-    <my-footer>
-      footer
+    <my-footer class="full-width">
+      <flex-container>
+        <div className="left">COPYRIGHT © {new Date().getFullYear()}</div>
+        <div className="right">And</div>
+      </flex-container>
     </my-footer>
   )
 }

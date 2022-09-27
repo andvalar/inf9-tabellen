@@ -3,6 +3,7 @@ import './App.css'
 import { data } from './Data'
 import { LessonPage } from './Topic'
 import { Header, Footer } from './Outline'
+//import { ScrollToTop } from './Util'
 import { BrowserRouter, Link, Routes, Route, Navigate } from "react-router-dom"
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
     <>
       <BrowserRouter basename={ `/${data.name}` }>
+        {/*<ScrollToTop>*/}
           <Header />
             <Routes>
               <Route path="lesson/:topic/:lesson" element={ <LessonPage /> } />
@@ -20,9 +22,12 @@ function App() {
               <Route path="*" element={ "Not found" } />
             </Routes>
           <Footer />
+        {/*</ScrollToTop>*/}
       </BrowserRouter>
     </>
   )
 }
+
+
 
 export default App

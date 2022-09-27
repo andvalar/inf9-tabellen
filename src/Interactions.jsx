@@ -22,6 +22,7 @@ export function MultipleChoice({ prompt, options:labels, correctOptions }) {  //
           <label key={label} className={clsx(
               selected && "selected", 
               isSolutionVisible && (selected === correct ? "correct" : "incorrect"),
+              "pulse"
             )}>
             <input type="checkbox" className="invis" onChange={ evt => 
                 setOptions(options =>   // options => gibt garantiert aktuelle options, als Fkt
@@ -50,7 +51,7 @@ export function Task({ number, prompt, content, image }) {
           image &&
             <img src={ `/${data.name}/${image}` } />
         }
-        <promt-description>{ content }</promt-description>
+        <promt-description dangerouslySetInnerHTML={{__html: content }}></promt-description>
       </flex-container>
     </my-task>
   )

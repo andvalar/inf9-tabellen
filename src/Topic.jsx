@@ -45,11 +45,11 @@ export const LessonPage = () => {
         <flex-container>
         {
           topic.content[lessonIndex - 1] &&  
-            <Link to={"/lesson/"+topic.name+"/"+topic.content[lessonIndex - 1].name}>Vorige Lektion</Link>
+            <Link to={"/lesson/"+topic.name+"/"+topic.content[lessonIndex - 1].name}>&lt; Vorige Lektion</Link>
         }
         {
           topic.content[lessonIndex + 1] &&  
-            <Link to={"/lesson/"+topic.name+"/"+topic.content[lessonIndex + 1].name}>Nächste Lektion</Link>
+            <Link to={"/lesson/"+topic.name+"/"+topic.content[lessonIndex + 1].name}>Nächste Lektion &gt;</Link>
         }
         
         {/*<button
@@ -100,13 +100,13 @@ const LessonSection = ({ content }) => {
 
 const IntroView = ({ intro }) => { 
   return (
-    <div>{intro.content}intro</div>
+    <my-intro dangerouslySetInnerHTML={{__html: intro.content}}></my-intro>
   )
 }
 
 const EntryView = ({ entry }) => {
   return (
-    <my-entry>
+    <my-entry class="full-width">
       <h1>Tabellendokumente</h1>
       {entry.content.map(({title, content, image}, index) =>
         <div key={title+index}>

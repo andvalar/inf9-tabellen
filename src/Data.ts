@@ -21,7 +21,7 @@ export const data = {
               prompt: "Wähle die Tabellenkalkulationsprogramme aus!",
               options: [
                 "Ubuntu Nano", 
-                "Microsoft OFfice Excel", 
+                "Microsoft Office Excel", 
                 "LibreOffice Calc",
                 "Apple Pages",
                 "Samsung Tables",
@@ -72,7 +72,9 @@ export const data = {
               number: "1a",
               prompt: "Dein erstes Tabellendokument",
               content: `Erstelle ein Tabellendokument, z.B. mit Microsoft Excel oder LibreOffice Calc. 
-                Speichere es in deinen Dokumenten im Ordner 'Info 9' unter dem Namen 'Erste-Tabelle' ab.`,
+                Speichere es in <my-code>deinen Dokumenten</my-code> im 
+                Ordner <my-code>Info 9</my-code> (neuen Ordner erstellen) 
+                unter dem Namen <my-code>Erste-Tabelle</my-code> ab.`,
             },
             {
               _type: "task",
@@ -116,14 +118,16 @@ export const data = {
           content: [  // array of entrys, tasks...
             {
               _type: "intro",
-              content: `Formeln PLATZHALTER`,
+              content: `Die bisherigen Aufgaben (eine Tabelle zu erstellen und zu formatieren), hätten wir viel einfacher auch mit 
+              einem Textverarbeitungsprogramm, wie z. B. Word oder Writer, erledigen können. <br /><br />
+              Hier lernst du, wie du ein Tabellenkalkulationsprogramm zum automatisierten Rechnen nutzen kannst.`,
             },
             {
               _type: "multipleChoice",
               prompt: "",
               options: [
                 "Ubuntu Nano", 
-                "Microsoft OFfice Excel", 
+                "Microsoft Office Excel", 
               ],
               correctOptions: [1],
             },
@@ -134,8 +138,9 @@ export const data = {
                 {
                   title: "Aufbau",
                   content: `Ein Tabellendokument kann aus mehreren Tabellen bestehen. 
-                    Jede Tabelle enthält <span className="color-green">Zellen (hier: B4)</span>, die in <span className="color-blue">Zeilen (hier: 4)</span> und <span className="color-orange">Spalten (hier: B)</span> angeordnet sind.
-                    In einer Zelle kann ein Wert stehen.`,
+                    Jede Tabelle enthält <span className="color-green">Zellen (hier: B4)</span>, die in 
+                    <span className="color-blue">Zeilen (hier: 4)</span> und <span className="color-orange">Spalten (hier: B)</span> 
+                    angeordnet sind. In einer Zelle kann ein Wert stehen.`,
                   image: `1-1-cell_row_column.png`,
           
                 },
