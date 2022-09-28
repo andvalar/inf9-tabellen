@@ -241,7 +241,7 @@ export const data = {
               _type: "task",
               number: "3",
               prompt: "Jetzt ohne Stützräder",
-              content: `Öffne die Datei <a href="/${base}/grundrechenarten.ods"><my-code>prozentrechnung.ods</my-code></a> und löse die 
+              content: `Öffne die Datei <a href="/${base}/prozentrechnung.ods"><my-code>prozentrechnung.ods</my-code></a> und löse die 
                 Prozentrechnungsaufgaben mithilfe passender Formeln.`,
             },
             {
@@ -250,7 +250,7 @@ export const data = {
               prompt: "Profi",
               content: `<ol>
                   <li>Eine Stegreifaufgabe dauert im Durchschnitt nur ein Drittel mal so lang, wie eine Schulaufgabe. 
-                  Öffne die Datei <a href="/${base}/pruefungsdauer.ods"><my-code>grundrechenarten.ods</my-code></a> und trage
+                  Öffne die Datei <a href="/${base}/pruefungsdauer.ods"><my-code>pruefungsdauer.ods</my-code></a> und trage
                   in der Zelle <my-em>C6</my-em> eine entsprechende Formel ein, obwohl in <my-em>C3</my-em> noch kein Wert steht.</li>
                   <li>Gleichzeitig dauert eine Schulaufgabe im Durchschnitt 30 min länger, als eine Stegreifaufgabe.Schulaufgabe
                   Trage die entsprechende Formel in der Zelle <my-em>C3</my-em> ein, auch wenn ein Fehler wegen zirkulärer Referenz auftritt</li>
