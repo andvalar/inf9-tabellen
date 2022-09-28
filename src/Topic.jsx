@@ -27,6 +27,7 @@ export const LessonPage = () => {
   return (
     <div className="lesson-wrapper">
       <h1>{data.title}</h1>
+      <h2>{topic.title}</h2>
 
       <my-topic>
         <h2>{chapter.map(idx => idx + 1).join(".")}: {lesson.title}</h2>
@@ -84,16 +85,17 @@ const LessonSection = ({ content }) => {
     return <MultipleChoice 
       prompt={content.prompt} 
       options={content.options} 
-      correctOptions={content.correctOptions} />
+      correctOptions={content.correctOptions}
+      image={content.image} />
   }
   if (content._type === "task") {
     return <Task 
       number={content.number}
       prompt={content.prompt}
       content={content.content}
-      image={content.image} />
+      image={content.image}
+      file={content.file} />
   }
-  // if (...)
   return <ErorThingsBroken />
 }
 
@@ -107,12 +109,12 @@ const IntroView = ({ intro }) => {
 const EntryView = ({ entry }) => {
   return (
     <my-entry class="full-width">
-      <h1>Tabellendokumente</h1>
+      <h1>{ entry.title }</h1>
       {entry.content.map(({title, content, image}, index) =>
         <div key={title+index}>
           <h2>{ title }</h2>
           <flex-container>
-            <img src={ `/${data.name}/${image}` } /> 
+            {image && <img src={ `/${data.name}/${image}` } />} 
             <div dangerouslySetInnerHTML={{__html: content}} />
           </flex-container>
         </div>
@@ -123,7 +125,7 @@ const EntryView = ({ entry }) => {
 
 // const MultipleChoicesView = ({ choices }) => {}
 
-const TaskView = ({ entry }) => {}
+// const TaskView = ({ entry }) => {}
 
 const ErorThingsBroken = ({ message }) => {
   return <error-message>Error: {message}</error-message>

@@ -4,7 +4,7 @@ import { data } from './Data'
 
 const clsx = (...classes) => classes.filter(Boolean).join(" ")
 
-export function MultipleChoice({ prompt, options:labels, correctOptions }) {  // options:labels bennent um
+export function MultipleChoice({ prompt, image, options:labels, correctOptions }) {  // options:labels bennent um
   const [options, setOptions] = useState(() => labels.map((label, index) =>    // () => damit als Fkt, die nur initial aufg wird
     ({ 
       label, 
@@ -16,7 +16,10 @@ export function MultipleChoice({ prompt, options:labels, correctOptions }) {  //
 
   return (
     <my-multiplechoice>
-      <prompt-line>{ prompt }</prompt-line>
+      <flex-container>
+        {image && <img src={ `/${data.name}/${image}` } />}
+        <prompt-line dangerouslySetInnerHTML={{__html: prompt }}></prompt-line>
+      </flex-container>
       <flex-container>
         {options.map(({ label, selected, correct }, index) =>  // option destructured in die attr
           <label key={label} className={clsx(
@@ -31,7 +34,7 @@ export function MultipleChoice({ prompt, options:labels, correctOptions }) {  //
                   )
                 )
             } />
-            {label}
+            <div dangerouslySetInnerHTML={{__html: label }}></div>
           </label>
         )}
       </flex-container>
@@ -41,18 +44,18 @@ export function MultipleChoice({ prompt, options:labels, correctOptions }) {  //
 }
 
 
-export function Task({ number, prompt, content, image }) {  
+export function Task({ number, prompt, content, image, file }) {  
 
   return (
     <my-task>
       <prompt-line>Aufgabe { number }: { prompt }</prompt-line>
-      <flex-container>
-        { 
-          image &&
-            <img src={ `/${data.name}/${image}` } />
-        }
+      <flex-container className="vert">
+        {image && <img src={ `/${data.name}/${image}` } />}
+        {/*content.map(     SPÄTER: als array, MultipleChoice oder string
+        )*/}
         <promt-description dangerouslySetInnerHTML={{__html: content }}></promt-description>
       </flex-container>
+        {file && <a href={ `/${data.name}/${file}` }><img src={`/${data.name}/download.png`} className="dl"/>{file}</a>}
     </my-task>
   )
 }

@@ -113,7 +113,7 @@ h1, h2, h3{
 .color-orange {
   color: darkorange;
 }
-my-header, my-footer {
+my-header, my-footer, my-bsp, my-tip {
   display: block;
 }
 
@@ -200,6 +200,44 @@ my-code {
   background-color: var(--bg-color);
   color: var(--primary-color);
   padding: 0.3em;
+  border: 2px dashed var(--subtle-color);
+  border-style: dashed solid;
+}
+my-entry my-code, label my-code {
+  background-color: var(--bg-dark-color);
+}
+
+my-em {
+  color: var(--primary-color);
+}
+my-entry my-em {
+  color: var(--desc-color);
+}
+
+my-bsp, my-tip {
+  background-color: var(--bg-second-color);
+  padding: 1em;
+  margin: 2em 0;
+}
+
+my-tip {
+  color: var(--subtle-color);
+}
+
+my-bsp span, my-tip span {
+  color: var(--primary-color);
+}
+
+my-entry table {
+  border: 2px solid var(--subtle-color);
+  margin: 1em auto;
+}
+my-entry table th {
+  background-color: var(--subtle-color);
+}
+my-entry table  * {
+  padding: 1em;
+  text-align: center;
 }
 
 promt-description {
@@ -208,13 +246,37 @@ promt-description {
   word-wrap: break-word;
   color: var(--desc-color);
 }
+my-task img.dl {
+  width: 2em;
+  position: relative;
+  bottom: -25% !important;
+}
 
+my-multiplechoice img {
+  max-width: 30%;
+}
+my-multiplechoice flex-container {
+  align-items: start;
+}
 prompt-line {
-  display: block;
+  flex: 2;
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 1em;
   color: var(--secondary-color);
+}
+
+ol {
+  list-style-type: lower-alpha;
+  list-style-position: outside;
+}
+
+ol ::marker {
+  color:  var(--secondary-color);
+}
+
+li {
+  margin-bottom: 2em;
 }
 
 label {
@@ -243,6 +305,9 @@ flex-container {
   align-items: center;
   align-content: stretch;
   gap: 1rem 1rem;
+}
+.vert {
+  flex-flow: column wrap;
 }
 
 button {
