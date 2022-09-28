@@ -125,15 +125,6 @@ export const data = {
               Hier lernst du, wie du ein Tabellenkalkulationsprogramm zum automatisierten Rechnen nutzen kannst.`,
             },
             {
-              _type: "multipleChoice",
-              prompt: "",
-              options: [
-                "Ubuntu Nano", 
-                "Microsoft Office Excel", 
-              ],
-              correctOptions: [1],
-            },
-            {
               _type: "entry",
               title: "Formeln",
               content: [
