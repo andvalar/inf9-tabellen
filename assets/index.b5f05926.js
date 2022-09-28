@@ -95,10 +95,10 @@ Error generating stack: `+o.message+`
                   <li>Sorge daf\xFCr, dass die Werte als %-Angaben angezeigt werden, ohne die Zellwerte zu ver\xE4ndern.</li>
                   <li>\xC4ndere den Wert von <my-em>C1</my-em> oder <my-em>C2</my-em>, um, deine Formeln zu \xFCberpr\xFCfen.</li>
                 </ol>`},{_type:"task",number:"2",prompt:"...und weiter",content:`F\xFCge der gleichen Datei bei den Beispielen 2 bis 10 jeweils in den gelben Feldern die richtige Formel ein. 
-                Speichere deine Bearbeitung ab.`},{_type:"task",number:"3",prompt:"Jetzt ohne St\xFCtzr\xE4der",content:`\xD6ffne die Datei <a href="/${zr}/grundrechenarten.ods"><my-code>prozentrechnung.ods</my-code></a> und l\xF6se die 
+                Speichere deine Bearbeitung ab.`},{_type:"task",number:"3",prompt:"Jetzt ohne St\xFCtzr\xE4der",content:`\xD6ffne die Datei <a href="/${zr}/prozentrechnung.ods"><my-code>prozentrechnung.ods</my-code></a> und l\xF6se die 
                 Prozentrechnungsaufgaben mithilfe passender Formeln.`},{_type:"task",number:"4",prompt:"Profi",content:`<ol>
                   <li>Eine Stegreifaufgabe dauert im Durchschnitt nur ein Drittel mal so lang, wie eine Schulaufgabe. 
-                  \xD6ffne die Datei <a href="/${zr}/pruefungsdauer.ods"><my-code>grundrechenarten.ods</my-code></a> und trage
+                  \xD6ffne die Datei <a href="/${zr}/pruefungsdauer.ods"><my-code>pruefungsdauer.ods</my-code></a> und trage
                   in der Zelle <my-em>C6</my-em> eine entsprechende Formel ein, obwohl in <my-em>C3</my-em> noch kein Wert steht.</li>
                   <li>Gleichzeitig dauert eine Schulaufgabe im Durchschnitt 30 min l\xE4nger, als eine Stegreifaufgabe.Schulaufgabe
                   Trage die entsprechende Formel in der Zelle <my-em>C3</my-em> ein, auch wenn ein Fehler wegen zirkul\xE4rer Referenz auftritt</li>
