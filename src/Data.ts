@@ -130,7 +130,7 @@ export const data = {
               content: [
                 {
                   title: "Zellbezüge",
-                  content: `Jede Zell ist durch Angabe der Spalte und Zeile eindeutig bestimmt.<br /><br />
+                  content: `Jede Zelle ist durch Angabe der Spalte und Zeile eindeutig bestimmt.<br /><br />
                     Die Spalten werden mit Buchstaben betitelt (A, B, C,...).<br />
                     Die Zeilen werden mit Zahlen (1, 2, 3,...) durchnummeriert.<br /><br />
                     Buchstabe und Zahl zusammen bilden (wie bei "Schiffe versenken") einen Zellbezug, z.B. <my-code>A1</my-code> oder <my-code>C3</my-code>`,
@@ -196,7 +196,7 @@ export const data = {
                 "In <my-em>C2</my-em> <my-code>^</my-code> statt <my-code>*</my-code>",
                 "In <my-em>C2</my-em> <my-code>8</my-code> statt <my-code>A1</my-code>",
                 "In <my-em>C2</my-em> <my-code>4</my-code> statt <my-code>3</my-code>",
-                "In <my-em>A1</my-em> <my-code>1/3</my-code> statt <my-code>2</my-code>", 
+                "In <my-em>A1</my-em> <my-code>8/3</my-code> statt <my-code>2</my-code>", 
               ],
               correctOptions: [0, 2, 3],
             },
