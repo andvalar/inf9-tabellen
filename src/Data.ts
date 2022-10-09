@@ -9,14 +9,74 @@ export const data = {
       name: "tabellen",
       content: [  // array of lessons
         {
+          title: "E-V-A",
+          name: "eva",
+          content: [  // array of entrys, tasks...
+            {
+              _type: "intro",
+              content: `Eingabe, Verarbeitung, Ausgabe - dieses Prinzip ist - nicht nur - in der 
+                Informatik allgegenwärtig.`,
+            },
+            {
+              _type: "multipleChoice",
+              prompt: "Wofür steht 'E-V-A'?",
+              options: [
+                "Für A-D-A-Ms Frau", 
+                "Für Eingabe-Verarbeitung-Angabe",
+                "Für Entropic-Vectoriczation-Artifact",
+                "Für Eingabe-Verarbeitung-Ausgabe", 
+              ],
+              correctOptions: [3],
+            },
+            {
+              _type: "entry",
+              title: "",
+              content: [
+                {
+                  title: "E-V-A-Prinzip",
+                  content: `Eingabe, Verarbeitung, Ausgabe - dieses Prinzip ist in der Informatik allgegenwärtig.
+                    Gerade in der Tabellenkalkulation begegnet es dir überall.<br /><br />
+                    Wenn du später bei komplexeren Funktionen einmal nicht weiter weißt, kann es dir helfen, 
+                    in Ruhe noch einmal das E-V-A-Prinzip durchzugehen:<br />
+                    Was ist/sind die Eingabe/n? <br />
+                    Wie werden sie verarbeitet? <br />
+                    Was soll am Ende ausgegeben werden?`,
+                  image: ``,
+          
+                },
+              ],
+            },
+            /*{
+              _type: "multipleChoice",
+              prompt: "",
+              options: [
+                "", 
+                "", 
+                "",
+              ],
+              correctOptions: [],
+            },
+            {
+              _type: "task",
+              number: "",
+              prompt: "",
+              content: ``,
+            },*/
+          ],
+        },
+        {
           title: "Tabellendokumente",
           name: "tabellendokumente",
           content: [  // array of entrys, tasks...
             {
               _type: "intro",
-              content: `Ein Tabellenkalkulationsprogramm ist eine Software, mit der man Tabellen 
-                  erstellen und verwalten kann.
-                  In diesem Tabellen kann der Computer automatische Berechnungen durchführen.`,
+              content: `Ein Tabellenkalkulationsprogramm (TKP) ist eine Software, mit der man Tabellen 
+                  erstellen und verwalten kann, in denen vom Computer automatische Berechnungen 
+                  durchgeführt werden können.
+                  Zum Beispiel werden sie in vielen Unternehmen zur (einfachen) Buchhaltung, 
+                  Berechnung von Marktverläufen oder Gewinnoptimierung genutzt. 
+                  Gängige Tabellenkalkulationsprogramme sind zum Beispiel: Microsoft Excel, 
+                  LibreOffice Calc und Apple Numbers`,
             },
             {
               _type: "multipleChoice",
@@ -223,8 +283,8 @@ export const data = {
                 <my-tip><span>Tipp:</span> Dazu musst du in Zelle <my-em>C3</my-em> eine Formel mit Zellbezügen hinenschreiben.</my-tip>
                 <ol>
                   <li>Schreibe den Inhalt von <my-em>C3</my-em></li>
-                  <li>Schreibe den Inhalt von <my-em>C3</my-em></li>
-                  <li>Schreibe den Inhalt von <my-em>C3</my-em></li>
+                  <li>Schreibe den Inhalt von <my-em>C5</my-em></li>
+                  <li>Schreibe den Inhalt von <my-em>C7</my-em></li>
                   <li>Sorge dafür, dass die Werte als %-Angaben angezeigt werden, ohne die Zellwerte zu verändern.</li>
                   <li>Ändere den Wert von <my-em>C1</my-em> oder <my-em>C2</my-em>, um, deine Formeln zu überprüfen.</li>
                 </ol>`,
@@ -259,6 +319,154 @@ export const data = {
                   (wiederholte Berechnungen) erfolgen. Untersuche, ob auf dieses Weise die richtigen Prüfungsdauern berechnet werden.</li>
                 </ol>`,
             },
+            {
+              _type: "entry",
+              title: "Kopieren von Formeln",
+              content: [
+                {
+                  title: "Relative Zellbezüge",
+                  content: `Du kannst den Inhalt von Zellen kopieren, wenn in folgenden Zeilen oder Spalten gleiche oder ähnliche Formeln stehen sollen.
+                    Das ist natürlich deutlich praktischer, als jede Formel einzeln einzutippen.`,
+                  image: `3-formeln_kopieren.png`,
+                },
+                {
+                  title: "",
+                  content: `Zum Beispiel geht das durch Tastenkombination (<my-code>Strg+C</my-code> zum Kopieren
+                    <my-code>Strg+V</my-code> zum Einfügen) oder indem du einen zu kopierenden Bereich markierst (linksklickst) und dann die rechte untere
+                    Ecke davon klickst, ziehst und loslässt (siehe Bilder).`,
+                  image: `3-formeln_kopieren2.png`,
+                },
+                {
+                  title: "",
+                  content: `Enthält die ursprüngliche Zelle einen Zellbezug, wird dieser automatisch angepasst. In diesem Fall ändert sich automatisch die Zeile.
+                    Der Zellbezug bleibt sozusagen bei <my-em>"Nimm die Zelle links daneben"</my-em>. Das nennen wir einen <my-em>relativen Zellbezug</my-em>.`,
+                  image: `3-formeln_kopieren3.png`,
+                },
+                {
+                  title: "Absolute Zellbezüge",
+                  content: `Fügst du in der ursprünglichen Zelle ein <my-em>$</my-em> im Zellbezug ein, wird dadurch entweder die Zeile oder die Spalte
+                    oder beides "festgehalten".`,
+                  image: `3-formeln_kopieren4.png`,
+                },
+                {
+                  title: "",
+                  content: `So wird beim Kopieren die Zeile nicht automatisch verändert, der Bezug bezieht sich weiter auf exakt die gleiche Zelle.`,
+                  image: `3-formeln_kopieren5.png`,
+                },
+                {
+                  title: "",
+                  content: `In diesem Beispiel kannst du sehen, dass die Zeile (<my-code>$2</my-code>) festgehalten wurde, sozusagen <my-em>"Nimm immer
+                    genau die Zelle A2"</my-em>. Das nennen wir einen 
+                    <my-em>absoluten Zellbezug</my-em>.`,
+                  image: `3-formeln_kopieren6.png`,
+                },
+                {
+                  title: "",
+                  content: `(Genau genommen ist das oben kein reiner absoluter Zellbezug, da nur die Zeile festgehalten wurde. In diesem Fall sprechen
+                    wir auch manchmal von einem <my-em>gemischten Zellbezug</my-em>. Wenn wir "nach rechts" statt "nach unten" kopiert hätten, hätte
+                    sich die Spalte weiter verändert...)`,
+                  image: ``,
+                },
+              ],
+            },
+            {
+              _type: "multipleChoice",
+              prompt: `<my-code>=$E$5</my-code> ist...`,
+              options: [
+                "ein absoluter Zellbezug",
+                "ein relativer Zellbezug",
+                "ein gemischter Zellbezug",
+                "eine Formel",
+              ],
+              correctOptions: [0,3,],
+            },
+            {
+              _type: "task",
+              number: "5.1",
+              prompt: "Relative Zellbezüge",
+              content: `Öffne die Datei <a href="/${base}/aufkleber.ods"><my-code>aufkleber.ods</my-code></a>.<br />
+                Es soll der Preis von Aufklebern berechnet werden. Ein Aufkleber kostet 0,05€.<br />
+                <ol>
+                  <li>Gib auf der Tabelle <my-em>Ohne Porto</my-em> nur in der Zelle <my-em>C3</my-em> die richtige Formel 
+                  <my-code>=B3*0,05</my-code> ein.</li>
+                  <li>Kopiere dann die Zelle <my-em>C3</my-em> in <my-em>C4</my-em> bis <my-em>C12</my-em></li>
+                  <li>Überprüfe den Inhalt der kopierten Zellen. Welche Art von Zellbezug wurde hier genutzt?</li>
+                </ol>`,
+            },
+            {
+              _type: "task",
+              number: "5.2",
+              prompt: "Absolute Zellbezüge",
+              content: `Wechsle in der gleichen Datei (<my-em>aufkleber.ods</my-em>) auf die Tabelle <my-em>MitPorto</my-em>.<br />
+                Zu den Kosten soll nun noch ein festes Porto dazukommen, das in Zelle <my-em>E3</my-em> eingetragen ist.<br />
+                <ol>
+                  <li>Gib in der Zelle <my-em>C3</my-em> die angepasste Formel <my-code>=B3*0,05+E3</my-code> ein.</li>
+                  <li>Kopiere dann die Zelle <my-em>C3</my-em> in <my-em>C4</my-em> bis <my-em>C12</my-em>. Dir wird auffallen, dass hier
+                  etwas schiefgegangen ist. Überprüfe den Inhalt der kopierten Zellen. Was ist passiert?</li>
+                  <li>Verändere die Art des Zellbezugs: Schreibe <my-code>$E$3</my-code> statt <my-code>E3</my-code> in die ursprüngliche 
+                  Zelle <my-em>C3</my-em>. Kopiere dann wieder in die Zeilen danach.</li>
+                  <li>Überprüfe erneut den Inhalt der kopierten Zellen. Welche Art von Zellbezug wurde jetzt genutzt?</li>
+                </ol>`,
+            },
+            {
+              _type: "task",
+              number: "6",
+              prompt: "Jetzt selbst...",
+              content: `Öffne die Datei <a href="/${base}/adressierungsarten.ods"><my-code>adressierungsarten.ods</my-code></a>.<br />
+                <ol>
+                  <li>Auf der Tabelle <my-em>Punktzahlen</my-em> soll für jede:n einzelne:n Schüler:in die Gesamtpunktzahl berechnet werden, 
+                  die sich aus drei Runden eines Spiels ergibt.
+                  <my-tip><span>Tipp a:</span> Denke an die Zellbezugsart. Bist du dir unsicher, denke an Aufgabe 5.</my-tip></li>
+                  <li>Wechsle zur Tabelle <my-em>Startpunktzahl</my-em>. Hier soll zur Punktzahl aus den Runden noch eine Startpunktzahl
+                  addiert werden, die in Zelle <my-em>H3</my-em> steht und verändert werden kann.</li>
+                  <li>Die Fibonacci-Folge sind die Zahlen 1, 1, 2, 3, 5, 8, 13, 21, 34, 55,...<br />
+                  Berechne in der Tabelle <my-em>Fibonacci</my-em> die 50. Zahl der Folge.
+                  <my-tip><span>Tipp c:</span> Die ersten zwei Zahlen der Fibonacci-Folge sind fest: 1 und 1. Ab dort kannst du mit einer 
+                  simplen Formel mit Addition weiter rechnen...</my-tip></li>
+                  <li>Angenommen, du legst 1200€ bei einem (jährlichen) Zinssatz von 4,25% für 50 Jahre an. Berechne das Guthaben 
+                  in der Tabelle <my-em>Sparguthaben</my-em></li>
+                  <li>Das Heron-Verfahren berechnet die Quadratwurzel einer gegebenen Zahl in Näherungsschritten (es ist also ein 
+                  <my-em>Algorithmus</my-em>).<br />
+                  Die grundlegende Idee: Nähere dich der quadratischen Fläche durch grobe Rechtecke, die in jedem Schritt "quadratischer" werden.
+                  Die (zuerst unterschiedlichen) Seitenlängen sind die Näherung der Wurzel.<br />
+                  Berechne in der Tabelle <my-em>Heron-Verfahren</my-em> beliebige Quadratwurzeln: Im ersten Schritt wird ein x gewählt,
+                  und ein passendes y berechnet (so dass x*y die Fläche ergibt, von der die Wurzel berechnet werden soll).<br />
+                  Im Folgenden ist das neue x die Mitte zwischen dem alten x und dem alten y, das neue y wird entsprechend wie oben berechnet.
+                  </li>
+                  <li>Erstelle in der Tabelle <my-em>Multiplikationstafel</my-em> eine große "1x1-Tabelle" von 1 bis 100.
+                  <my-tip><span>Tipp f:</span> Nutze gemischte Adressierung: Denke immer darüber nach, was "festgehalten" werden muss und was nicht.</my-tip></li>
+                  <li>In der Tabelle <my-em>Stammbruchsumme</my-em> geht es um die Summe der ersten 1000 Stammbrüche: 
+                  <img src="/${base}/stammbruchsumme.png" / class="colorover"><br />
+                  Schätze zuerst die Summe, berechne sie dann.</li>
+                  <li>Wechsle zur Tabelle <my-em>Wertetabelle</my-em>. Hier sollen Wertetabellen für lineare Funktionen erstellt werden.
+                  Dabei ist die Steigung m, der y-Achsenabschnitt t, der Startwert für x sowie der Abstand zweier x-Wert der Tabelle frei wählbar.</li>
+                  <li>Folgende Abbildung zeigt das pascalsche Dreieck:<br />
+                  <img src="/${base}/pascalsches_dreieck.png" / class="colorover"><br />
+                  Trage in der Tabelle <my-em>PascalschesDreieck</my-em> ein möglichst großes pascalsches Dreieck ein.
+                  <my-tip><span>Tipp:</span> Lege das Dreieck "schräg" an, so dass die Spitze in Zelle <my-em>A1</my-em> liegt. Die Regel
+                  von oben nach unten hängt mit einfacher Addition zusammen...</li>
+                  <li>Die Fakultät <my-em>n!</my-em> einer natürlichen Zahl n ist das Produkt der Zahlen <my-em>von 1 bis n</my-em>.<br />
+                  Bsp.: <my-code>5! = 1 * 2 * 3 * 4 * 5</my-code><br />
+                  Vervollständige die Tabelle <my-em>Fakultät</my-em>. Beachte, dass <my-code>0! = 1</my-code> definiert ist.</li>
+                </ol>`,
+            },
+            {
+              _type: "task",
+              number: "7",
+              prompt: "Termwerte",
+              content: `Gegeben ist der von einer natürlichen Zahl n abhängige Term: 
+                <img src="/${base}/term.png" / class="colorover" alt="(1 + 1/n)^n"><br /><br />
+                Untersuche in einer Tabelle, wie sich der Wert des Terms verändert, wenn n immer größer wird.`,
+            },
+            {
+              _type: "task",
+              number: "8",
+              prompt: "Kettenbruch",
+              content: `Finde heraus, was sich hinter folgendem Kettenbruch verbirgt:<br />
+                <img src="/${base}/kettenbruch.png" / class="colorover">
+                <my-tip><span>Tipp:</span> Erstelle zuerst Tabellenspalten, in denen z.B. für n=1,...,50 die Werte von 2n-1 und n^2 stehen.
+                Anschließend berechnest du in einer weiteren Spalte von unten nach oben nacheinander die Nenner.</my-tip>`,
+            },
           ],
         },
         {
@@ -267,9 +475,34 @@ export const data = {
           content: [  // array of entrys, tasks...
             {
               _type: "intro",
-              content: ``,
+              content: `Die Berechnungen, die du bisher mithilfe von Formeln durchgeführst hast, haben sich oft aus mehreren 
+                Rechenschritten zusammengesetzt. 
+                Einen solchen Rechenschritt nennen wir im folgenden Funktion. Hier wirst du noch einige weitere, hilfreiche Funktionen
+                kennenlernen, um komplexere Aufgaben (oft einfacher) zu lösen. <br />
+                Außerdem lernst du, Funktionen (und später Verkettung von Funktionen) graphisch darzustellen. Solche graphischen
+                Darstellungen wirst du nutzen, um komplexe Berechnungen zuerst zu modellieren (also gedanklich zu sortieren) und sie dann
+                als Formel zu schreiben.<br />
+                <dataflow-diagram>
+                  <dataflow-params>
+                    <dataflow-parameter>1</dataflow-parameter>
+                    <dataflow-parameter>2</dataflow-parameter>
+                  </dataflow-params>
+                  <dataflow-arrows>
+                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                  </dataflow-arrows>
+                  <dataflow-function>
+                    +
+                  </dataflow-function>
+                  <dataflow-arrows>
+                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                  </dataflow-arrows>
+                  <dataflow-result>
+                    3
+                  </dataflow-result>
+                </dataflow-diagram>`,
             },
-            {
+            /*{
               _type: "multipleChoice",
               prompt: "",
               options: [
@@ -305,7 +538,7 @@ export const data = {
               number: "",
               prompt: "",
               content: ``,
-            },
+            },*/
           ],
         },
       ],

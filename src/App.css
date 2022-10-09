@@ -7,6 +7,7 @@
   --bg-color:  #001f33;
   --bg-second-color:  #051622;
   --subtle-color: rgba(134,155,169,.5);
+  --arrow-color:  var(--primary-color);
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
@@ -339,7 +340,127 @@ button.send {
   border-color:  red;
 }
 
+.colorover {
+  filter: invert(60%);
+}
+
 nav {
   border-top: 1px solid var(--secondary-color);
   padding: 5em 0;
+}
+
+dataflow-diagram {
+  width: 10em;
+  display: flex;
+  flex-flow: column;
+}
+
+dataflow-params, dataflow-result, dataflow-function {
+  display: block;
+  margin: 0;
+}
+
+dataflow-params, dataflow-arrows {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+dataflow-parameter {
+}
+
+dataflow-arrows {
+  margin: -0.8em 0;
+}
+
+dataflow-function {
+  border: 1px solid var(--primary-color);
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+dataflow-result {
+  text-align: center;
+}
+
+/* 
+ *     Arrows 
+ */
+.arrow {
+  margin: 25px;
+  display: inline-block;
+  height: 12px;
+  position: relative;
+  width: 12px;
+}
+.arrow::after {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-right-style: solid;
+  border-right-width: 2px;
+  content: "";
+  display: inline-block;
+  height: 12px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 12px;
+}
+.arrow.is-triangle::after {
+  border-style: solid;
+  border-width: 0 0 12px 12px;
+  height: 0;
+  width: 0;
+}
+.arrow.is-check::after {
+  width: 6px;
+}
+.arrow.arrow-bar::before {
+  bottom: 1px;
+  content: "";
+  height: 20px;
+  position: absolute;
+  right: 0;
+  transform-origin: bottom;
+  width: 2px;
+  -moz-transform: rotate(-45deg);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+.arrow.is-top {
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -webkit-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+.arrow.is-right {
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -webkit-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+.arrow.is-bottom {
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.arrow.is-left {
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.arrow::after,
+.arrow .arrow::after {
+  border-color: var(--arrow-color);
+}
+.arrow.is-triangle::after,
+.arrow .arrow.is-triangle::after {
+  border-color: transparent;
+  border-bottom-color: var(--arrow-color);
+}
+.arrow::before,
+.arrow .arrow::before {
+  background-color: var(--arrow-color);
 }
