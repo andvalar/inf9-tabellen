@@ -500,6 +500,28 @@ export const data = {
                   <dataflow-result>
                     3
                   </dataflow-result>
+                </dataflow-diagram>
+
+                <dataflow-diagram>
+                  <dataflow-params>
+                    <dataflow-parameter>3</dataflow-parameter>
+                    <dataflow-parameter>1</dataflow-parameter>
+                    <dataflow-parameter>2</dataflow-parameter>
+                  </dataflow-params>
+                  <dataflow-arrows>
+                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                  </dataflow-arrows>
+                  <dataflow-function>
+                    Produkt
+                  </dataflow-function>
+                  <dataflow-arrows>
+                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                  </dataflow-arrows>
+                  <dataflow-result>
+                    6
+                  </dataflow-result>
                 </dataflow-diagram>`,
             },
             /*{

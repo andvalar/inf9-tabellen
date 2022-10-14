@@ -1,18 +1,35 @@
-#root {
+:root {
   color-scheme: dark light;
-  --primary-color: #1ba098;
-  --secondary-color: #deb992;
-  --desc-color: #869ba9;
-  --bg-dark-color: #081521;
-  --bg-color:  #001f33;
-  --bg-second-color:  #051622;
-  --subtle-color: rgba(134,155,169,.5);
-  --arrow-color:  var(--primary-color);
+
+  /* dark colors: */
+  --clr-standard: #869ba9;
+  --clr-special: #1ba098;
+  --clr-highlight: #deb992;
+  --clr-muted: rgba(134,155,169,.5);
+
+  --clr-bg-standard:  #001f33;
+  --clr-bg-special: #081521;
+  --clr-bg-muted:  #051622;
+
+  --clr-arrow:  var(--clr-special);
+
+  /* switch for light mode */
+  --foreground: var(--clr-bg-standard);
+  --background: var(--clr-standard);
+  --foreground-special: var(--clr-bg-special);
+  --background-special: var(--clr-special);
+  --foreground-highlight: var(--clr-highlight);
+  --background-highlight: var(--clr-highlight);
+  --foreground-muted: var(--clr-bg-muted);
+  --background-muted: var(--clr-muted);
+}
+
+#root {
   width: 100%;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 2rem;
-  color: var(--secondary-color);
+  color: var(--foreground-highlight);
   font-family: Trebuchet MS, Segoe UI, Helvetica Neue, Arial, sans-serif;
   font-size: 1.3rem;
   font-weight: 400;
@@ -21,6 +38,34 @@
 
 * {
   box-sizing: border-box;
+}
+
+body {
+  background-image: url(./assets/bg-lighter.jpg);
+  background-blend-mode: luminosity;
+  background-size: cover;
+  background-attachment: fixed;
+
+  background-color: var(--background);
+}
+
+.darkmode {
+  --foreground: var(--clr-standard);
+  --background: var(--clr-bg-standard);
+  --foreground-special: var(--clr-special);
+  --background-special: var(--clr-bg-special);
+  --foreground-highlight: var(--clr-highlight);
+  --background-highlight: var(--clr-bg-highlight);
+  --foreground-muted: var(--clr-muted);
+  --background-muted: var(--clr-bg-muted);
+}
+
+body.darkmode {
+  background-image: url(./assets/bg_stars.png);
+  background-blend-mode: normal;
+  background-size: inherit;
+
+  color: var(--clr-highlight);
 }
 
 .logo {
@@ -67,14 +112,8 @@
   transform: translateX(-50%);
 }
 
-body {
-  background-color: var(--bg-color);
-  background-image: url(./assets/bg_stars.png);
-  background-attachment: fixed;
-}
-
 a {
-  color: var(--primary-color);
+  color: var(--foreground-special);
   text-decoration: none;
 }
 
@@ -99,7 +138,7 @@ h3 {
   letter-spacing: 0.2em;
   margin-bottom: 5em;
   width: 100%;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 1px solid var(--foreground-special);
 }
 h1, h2, h3{
   text-align: center;
@@ -114,19 +153,38 @@ h1, h2, h3{
 .color-orange {
   color: darkorange;
 }
+
+#dark-mode-toggle {
+  position: absolute;
+  z-index: 100;
+  top: 1em;
+  right: 2em;
+  width: 2em;
+  height: 2em;
+  padding: 0;
+  color: var(--foreground);
+  border: 2px solid currentColor;
+  padding: 4px;
+  background: transparent;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+}
+
 my-header, my-footer, my-bsp, my-tip {
   display: block;
 }
 
 my-footer {
   margin: 8em 0 0 0;
-  background-color: var(--bg-second-color);
-  color: var(--subtle-color);
+  background-color: var(--background-muted);
+  color: var(--foreground-muted);
   padding: 20rem 6rem 20rem 6rem;
   letter-spacing: 0.2em;
 }
 my-footer > flex-container {
-  border-top: 1px solid var(--subtle-color);
+  border-top: 1px solid var(--foreground-muted);
   padding: 2em 0;
   width: 100%;
   max-width: 1280px;
@@ -138,7 +196,7 @@ my-footer .left {
   flex: 1;
 }
 my-footer .right {
-  color: var(--desc-color);
+  color: var(--foreground);
   flex: 2;
   font-size: 0.8em;
 }
@@ -150,7 +208,7 @@ my-nav, my-topic, my-intro, my-entry, my-task, my-multiplechoice {
 
 my-nav {
   padding: 5em 0;
-  border-bottom:  1px solid var(--secondary-color);
+  border-bottom:  1px solid var(--foreground-special);
 }
 
 my-nav > a {
@@ -159,13 +217,13 @@ my-nav > a {
 
 my-intro {
   margin: 10rem 0 15rem 0;
-  color: var(--desc-color);
+  color: var(--foreground);
 }
 
 my-entry  {
   margin:  15rem 0;
   padding: 2em 5em 6em 5em;
-  background-color: var(--bg-color);
+  background-color: var(--background);
   box-sizing: border-box;
 }
 
@@ -173,7 +231,7 @@ my-entry h1, my-entry h2, my-entry h3{
   text-align: left;
   padding: 0;
   margin: 2em 0 1em 0;
-  color: var(--primary-color);
+  color: var(--foreground-special);
 }
 my-entry h1 {
   font-size: 1.8em;
@@ -198,43 +256,43 @@ my-task flex-container img {
 
 my-code {
   font-family: monospace;
-  background-color: var(--bg-color);
-  color: var(--primary-color);
+  background-color: var(--background);
+  color: var(--foreground-special);
   padding: 0.3em;
-  border: 2px dashed var(--subtle-color);
+  border: 2px dashed var(--foreground-muted);
   border-style: dashed solid;
 }
 my-entry my-code, label my-code {
-  background-color: var(--bg-dark-color);
+  background-color: var(--background-special);
 }
 
 my-em {
-  color: var(--primary-color);
+  color: var(--foreground-special);
 }
 my-entry my-em {
-  color: var(--desc-color);
+  color: var(--foreground-special);
 }
 
 my-bsp, my-tip {
-  background-color: var(--bg-second-color);
+  background-color: var(--background-muted);
   padding: 1em;
   margin: 2em 0;
 }
 
 my-tip {
-  color: var(--subtle-color);
+  color: var(--foreground-muted);
 }
 
 my-bsp span, my-tip span {
-  color: var(--primary-color);
+  color: var(--foreground-special);
 }
 
 my-entry table {
-  border: 2px solid var(--subtle-color);
+  border: 2px solid var(--foreground-muted);
   margin: 1em auto;
 }
 my-entry table th {
-  background-color: var(--subtle-color);
+  background-color: var(--foreground-muted);
 }
 my-entry table  * {
   padding: 1em;
@@ -245,7 +303,7 @@ promt-description {
   display: block;
   flex: 1;
   word-wrap: break-word;
-  color: var(--desc-color);
+  color: var(--foreground);
 }
 my-task img.dl {
   width: 2em;
@@ -264,7 +322,7 @@ prompt-line {
   font-weight: bold;
   font-size: 1.5em;
   margin-bottom: 1em;
-  color: var(--secondary-color);
+  color: var(--foreground-highlight);
 }
 
 ol {
@@ -273,7 +331,7 @@ ol {
 }
 
 ol ::marker {
-  color:  var(--secondary-color);
+  color:  var(--foreground-highlight);
 }
 
 li {
@@ -284,7 +342,7 @@ label {
   padding: 1em 1.2em;
   border-radius: 8px;
   border: 5px solid transparent;
-  background-color: var(--bg-color);
+  background-color: var(--background);
   transition: border-color 1s;
   word-wrap: break-word;
   max-width: 27%;
@@ -296,7 +354,7 @@ label {
 }
 
 @keyframes pulse {
-  0% { box-shadow: 0 0 0 0 var(--subtle-color); }
+  0% { box-shadow: 0 0 0 0 var(--foreground-muted); }
 }
 
 flex-container {
@@ -319,18 +377,18 @@ button {
 }
 
 button:hover {
-  border-color: var(--secondary-color) !important;
+  border-color: var(--foreground-highlight) !important;
 }
 button:active {
-  border-color: var(--primary-color) !important;
+  border-color: var(--foreground-special) !important;
 }
 button.send {
   display: inline-block;
 }
 
 .selected {
-  background-color: var(--secondary-color);
-  color:  var(--bg-color);
+  background-color: var(--foreground-highlight);
+  color:  var(--background);
 }
 
 .correct {
@@ -345,7 +403,7 @@ button.send {
 }
 
 nav {
-  border-top: 1px solid var(--secondary-color);
+  border-top: 1px solid var(--foreground-highlight);
   padding: 5em 0;
 }
 
@@ -373,7 +431,7 @@ dataflow-arrows {
 }
 
 dataflow-function {
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--foreground-special);
   border-radius: 0.5em;
   text-align: center;
 }
@@ -453,14 +511,14 @@ dataflow-result {
 }
 .arrow::after,
 .arrow .arrow::after {
-  border-color: var(--arrow-color);
+  border-color: var(--clr-arrow);
 }
 .arrow.is-triangle::after,
 .arrow .arrow.is-triangle::after {
   border-color: transparent;
-  border-bottom-color: var(--arrow-color);
+  border-bottom-color: var(--clr-arrow);
 }
 .arrow::before,
 .arrow .arrow::before {
-  background-color: var(--arrow-color);
+  background-color: var(--clr-arrow);
 }
