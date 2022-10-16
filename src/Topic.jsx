@@ -3,6 +3,21 @@ import { useParams } from "react-router"
 import { Link } from "react-router-dom"
 import { MultipleChoice, Task } from "./Interactions"
 
+/* H5P Test */
+import { H5P } from 'h5p-standalone'; // ES6
+// const { H5P } = require('h5p-standalone'); AMD
+// const { H5P } = 'H5PStandalone'; // object destructuring
+
+/*const el = document.getElementById('h5p-container');
+alert(el)
+const options = {
+    h5pJsonPath: '/h5p/funktionen-auswerten',
+    frameJs: '', // /assets/frame.bundle.js',
+    frameCss: '', // /assets/styles/h5p.css',
+};
+
+new H5P(el, options);
+/* H5P Test Ende */
 
 
 export const LessonPage = () => {
@@ -24,10 +39,27 @@ export const LessonPage = () => {
 
   // const [currentLesson, setCurrentLesson] = useState(0)
 
+  /* H5P Test *
+  const el = document.getElementById('h5p-container');
+  console.log(`${topic.content.title} h5p-container: ${el}`)
+  const options = {
+    h5pJsonPath: '/h5p/funktionen-auswerten',
+    frameJs: '', // /assets/frame.bundle.js',
+    frameCss: '', // /assets/styles/h5p.css',
+  };
+
+  el && new H5P(el, options);
+
+  // NICHT VERGESSEN div ZU LÖSCHEN!
+
+  /* H5P Test Ende */
+
   return (
     <div className="lesson-wrapper">
       <h1>{data.title}</h1>
       <h2>{topic.title}</h2>
+
+      <div id='h5p-container'></div>
 
       <my-topic>
         <h2>{chapter.map(idx => idx + 1).join(".")}: {lesson.title}</h2>
@@ -93,6 +125,7 @@ const LessonSection = ({ content }) => {
       number={content.number}
       prompt={content.prompt}
       content={content.content}
+      solution={content.solution}
       image={content.image}
       file={content.file} />
   }

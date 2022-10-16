@@ -11,8 +11,6 @@
   --clr-bg-special: #081521;
   --clr-bg-muted:  #051622;
 
-  --clr-arrow:  var(--clr-special);
-
   /* switch for light mode */
   --foreground: var(--clr-bg-standard);
   --background: var(--clr-standard);
@@ -22,6 +20,8 @@
   --background-highlight: var(--clr-highlight);
   --foreground-muted: var(--clr-bg-muted);
   --background-muted: var(--clr-muted);
+
+  --clr-arrow:  var(--clr-bg-special);
 }
 
 #root {
@@ -58,6 +58,7 @@ body {
   --background-highlight: var(--clr-bg-highlight);
   --foreground-muted: var(--clr-muted);
   --background-muted: var(--clr-bg-muted);
+  --clr-arrow:  var(--clr-special);
 }
 
 body.darkmode {
@@ -101,6 +102,10 @@ body.darkmode {
 
 .invis {
   display: none;
+}
+
+.seethrough {
+  opacity: 0;
 }
 
 .full-width {
@@ -155,10 +160,10 @@ h1, h2, h3{
 }
 
 #dark-mode-toggle {
-  position: absolute;
+  position: fixed;
   z-index: 100;
-  top: 1em;
-  right: 2em;
+  top: .5em;
+  right: 1.5em;
   width: 2em;
   height: 2em;
   padding: 0;
@@ -365,6 +370,64 @@ flex-container {
   align-content: stretch;
   gap: 1rem 1rem;
 }
+
+flex-container.align-upper {
+  align-items: flex-start;
+}
+
+grid-container {
+  display: grid;
+  align-items: center;
+  grid-gap: .2em;
+  grid-template-columns: 1fr 1fr;
+}
+
+grid-container.col-3 {
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+grid-container.media-left {
+  grid-template-columns: 1fr 2fr;
+}
+
+grid-container.media-right {
+  grid-template-columns: 2fr 1fr;
+}
+
+grid-container > span {
+  padding: 1em;
+}
+
+my-intro grid-container {
+  grid-gap: 4rem;
+  grid-template-columns: 4fr 1fr;
+}
+
+my-entry grid-container {
+  grid-template-columns: 1fr 1fr;
+}
+
+my-entry grid-container.table {
+  border: 1px solid var(--foreground-muted);
+  padding: .2em;
+}
+
+grid-container .table-header {
+  background-color: var(--foreground-muted);
+}
+
+grid-container.table span {
+  text-align: center;
+}
+
+promt-description > grid-container {
+  grid-gap: 3em;
+}
+
+grid-container.no-gap {
+  grid-gap: 0;
+}
+
 .vert {
   flex-flow: column wrap;
 }
@@ -420,7 +483,7 @@ dataflow-params, dataflow-result, dataflow-function {
 
 dataflow-params, dataflow-arrows {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 dataflow-parameter {
@@ -429,6 +492,7 @@ dataflow-parameter {
 dataflow-arrows {
   margin: -0.8em 0;
 }
+
 
 dataflow-function {
   border: 1px solid var(--foreground-special);

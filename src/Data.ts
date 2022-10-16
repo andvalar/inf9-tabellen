@@ -436,12 +436,12 @@ export const data = {
                   <li>Erstelle in der Tabelle <my-em>Multiplikationstafel</my-em> eine große "1x1-Tabelle" von 1 bis 100.
                   <my-tip><span>Tipp f:</span> Nutze gemischte Adressierung: Denke immer darüber nach, was "festgehalten" werden muss und was nicht.</my-tip></li>
                   <li>In der Tabelle <my-em>Stammbruchsumme</my-em> geht es um die Summe der ersten 1000 Stammbrüche: 
-                  <img src="/${base}/stammbruchsumme.png" / class="colorover"><br />
+                  <img src="/${base}/stammbruchsumme.png" class="colorover" /><br />
                   Schätze zuerst die Summe, berechne sie dann.</li>
                   <li>Wechsle zur Tabelle <my-em>Wertetabelle</my-em>. Hier sollen Wertetabellen für lineare Funktionen erstellt werden.
                   Dabei ist die Steigung m, der y-Achsenabschnitt t, der Startwert für x sowie der Abstand zweier x-Wert der Tabelle frei wählbar.</li>
                   <li>Folgende Abbildung zeigt das pascalsche Dreieck:<br />
-                  <img src="/${base}/pascalsches_dreieck.png" / class="colorover"><br />
+                  <img src="/${base}/pascalsches_dreieck.png" class="colorover" /><br />
                   Trage in der Tabelle <my-em>PascalschesDreieck</my-em> ein möglichst großes pascalsches Dreieck ein.
                   <my-tip><span>Tipp:</span> Lege das Dreieck "schräg" an, so dass die Spitze in Zelle <my-em>A1</my-em> liegt. Die Regel
                   von oben nach unten hängt mit einfacher Addition zusammen...</li>
@@ -455,7 +455,7 @@ export const data = {
               number: "7",
               prompt: "Termwerte",
               content: `Gegeben ist der von einer natürlichen Zahl n abhängige Term: 
-                <img src="/${base}/term.png" / class="colorover" alt="(1 + 1/n)^n"><br /><br />
+                <img src="/${base}/term.png" class="colorover" alt="(1 + 1/n)^n" /><br /><br />
                 Untersuche in einer Tabelle, wie sich der Wert des Terms verändert, wenn n immer größer wird.`,
             },
             {
@@ -463,7 +463,7 @@ export const data = {
               number: "8",
               prompt: "Kettenbruch",
               content: `Finde heraus, was sich hinter folgendem Kettenbruch verbirgt:<br />
-                <img src="/${base}/kettenbruch.png" / class="colorover">
+                <img src="/${base}/kettenbruch.png" class="colorover" />
                 <my-tip><span>Tipp:</span> Erstelle zuerst Tabellenspalten, in denen z.B. für n=1,...,50 die Werte von 2n-1 und n^2 stehen.
                 Anschließend berechnest du in einer weiteren Spalte von unten nach oben nacheinander die Nenner.</my-tip>`,
             },
@@ -475,71 +475,71 @@ export const data = {
           content: [  // array of entrys, tasks...
             {
               _type: "intro",
-              content: `Die Berechnungen, die du bisher mithilfe von Formeln durchgeführst hast, haben sich oft aus mehreren 
+              content: `<p>Die Berechnungen, die du bisher mithilfe von Formeln durchgeführst hast, haben sich oft aus mehreren 
                 Rechenschritten zusammengesetzt. 
                 Einen solchen Rechenschritt nennen wir im folgenden Funktion. Hier wirst du noch einige weitere, hilfreiche Funktionen
-                kennenlernen, um komplexere Aufgaben (oft einfacher) zu lösen. <br />
-                Außerdem lernst du, Funktionen (und später Verkettung von Funktionen) graphisch darzustellen. Solche graphischen
-                Darstellungen wirst du nutzen, um komplexe Berechnungen zuerst zu modellieren (also gedanklich zu sortieren) und sie dann
-                als Formel zu schreiben.<br />
-                <dataflow-diagram>
-                  <dataflow-params>
-                    <dataflow-parameter>1</dataflow-parameter>
-                    <dataflow-parameter>2</dataflow-parameter>
-                  </dataflow-params>
-                  <dataflow-arrows>
-                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
-                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
-                  </dataflow-arrows>
-                  <dataflow-function>
-                    +
-                  </dataflow-function>
-                  <dataflow-arrows>
-                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
-                  </dataflow-arrows>
-                  <dataflow-result>
-                    3
-                  </dataflow-result>
-                </dataflow-diagram>
+                kennenlernen, um komplexere Aufgaben (oft einfacher) zu lösen.</p>
+                <grid-container>
+                  <p>Außerdem lernst du, Funktionen (und später Verkettung von Funktionen) graphisch darzustellen. Solche graphischen
+                  Darstellungen wirst du nutzen, um komplexe Berechnungen zuerst zu modellieren (also gedanklich zu sortieren) und sie dann
+                  als Formel zu schreiben.</p>
 
-                <dataflow-diagram>
-                  <dataflow-params>
-                    <dataflow-parameter>3</dataflow-parameter>
-                    <dataflow-parameter>1</dataflow-parameter>
-                    <dataflow-parameter>2</dataflow-parameter>
-                  </dataflow-params>
-                  <dataflow-arrows>
-                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
-                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
-                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
-                  </dataflow-arrows>
-                  <dataflow-function>
-                    Produkt
-                  </dataflow-function>
-                  <dataflow-arrows>
-                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
-                  </dataflow-arrows>
-                  <dataflow-result>
-                    6
-                  </dataflow-result>
-                </dataflow-diagram>`,
-            },
-            /*{
-              _type: "multipleChoice",
-              prompt: "",
-              options: [
-                "", 
-                "", 
-              ],
-              correctOptions: [],
+                  <dataflow-diagram>
+                    <dataflow-params>
+                      <dataflow-parameter>1</dataflow-parameter>
+                      <dataflow-parameter>2</dataflow-parameter>
+                    </dataflow-params>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-function>
+                      +
+                    </dataflow-function>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-result>
+                      3
+                    </dataflow-result>
+                  </dataflow-diagram>
+                </grid-container>`,
             },
             {
               _type: "entry",
-              title: "",
+              title: "Funktionen und ihre Darstellungen",
               content: [
                 {
-                  title: "",
-                  content: ``,
+                  title: "Grundbegriffe",
+                  content: `<p>Du kennst schon einige Funktionen, auch wenn du sie bisher sicher nicht 
+                    als Funktion wahrgenommen hast: <br />
+                    <my-em>+</my-em>, <my-em>-</my-em>, <my-em>*</my-em>,... Die Grundrechenarten, aber auch die <my-em>Wurzel</my-em>, 
+                    das <my-em>Runden</my-em> oder das Nennen einer <my-em>Zufallszahl</my-em> können wir als Funktion verstehen.</p>
+
+                    <p>Wir betrachten zum Beispiel <my-eM>1 + 2 = 3</my-eM>. Hier sind <my-code>1</my-code> und <my-code>2</my-code> 
+                    <my-em>Parameterwerte</my-em>, <my-code>+</my-code> der <my-eM>Funktionsbezeichner</my-eM> und zum Schluss
+                    <my-codE>3</my-codE> der <my-em>Rückgabewert</my-em></p>
+                    <br />
+                    <flex-container>
+                      <grid-container class="table col-3">
+                        <span class="table-header">E-V-A-Prinzip</span>
+                        <span class="table-header">Funktionen</span>
+                        <span class="table-header">Beispiel</span>
+                        <span>Eingabe</span>
+                        <span>Parameter</span>
+                        <span>1; 2</span>
+                        <span>Verarbeitungsvorschrift</span>
+                        <span>Funktion(sbezeichner)</span>
+                        <span>+</span>
+                        <span>Ausgabe</span>
+                        <span>Rückgabewert</span>
+                        <span>3</span>
+                      </grid-container>
+                    </flex-container>
+                    <br />
+                    <p>Du wirst feststellen, dass Funktionen unterschiedlich viele Parameter (Eingaben) annehmen. Die Grundrechenarten
+                    haben immer zwei, aber z. B. um eine Zufallszahl zu erhalten, musst du nichts weiter angeben.<br />
+                    <my-em>Jede Funktion, ohne Ausnahme, hat jedoch immer genau einen Rückgabewert.</my-em></p>`,
                   image: ``,
           
                 },
@@ -547,20 +547,386 @@ export const data = {
             },
             {
               _type: "multipleChoice",
-              prompt: "",
+              prompt: "<my-em>'Ziehe die Wurzel aus 49.'</my-em> Hier ist 49...",
               options: [
-                "", 
-                "", 
-                "",
+                "der Pamphlet", 
+                "der Rückgabewert", 
+                "der Papameter", 
+                "der Katheter", 
+                "der Parameter", 
               ],
-              correctOptions: [],
+              correctOptions: [4],
+            },
+            {
+              _type: "multipleChoice",
+              prompt: "Funktionen haben...",
+              options: [
+                "meistens zwei Parameter", 
+                "einen Rückgabewert", 
+                "keinen Rückgabewert", 
+                "eine Verarbeitungsvorschrift", 
+              ],
+              correctOptions: [1, 3],
+            },
+            {
+              _type: "entry",
+              title: "Funktionen und ihre Darstellungen",
+              content: [
+                {
+                  title: "Darstellung als Datenfluss",
+                  content: `Wie schon beim E-V-A-Prinzip stellen wir Funktionen oft "von oben nach unten" in ihre Einzelteile
+                    aufgegliedert dar - die Daten "fließen" sozusagen durch die Funktion: daher der Name <my-em>Datenflussdiagramm</my-em>.
+                    <br /><br />
+                    <flex-container>
+                        <dataflow-diagram>
+                          <dataflow-params>
+                            <dataflow-parameter>1</dataflow-parameter>
+                            <dataflow-parameter>2</dataflow-parameter>
+                          </dataflow-params>
+                          <dataflow-arrows>
+                            <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                            <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                          </dataflow-arrows>
+                          <dataflow-function>
+                            +
+                          </dataflow-function>
+                          <dataflow-arrows>
+                            <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                          </dataflow-arrows>
+                          <dataflow-result>
+                            3
+                          </dataflow-result>
+                        </dataflow-diagram>
+
+                        <dataflow-diagram>
+                          <dataflow-params>
+                            <dataflow-parameter>36</dataflow-parameter>
+                          </dataflow-params>
+                          <dataflow-arrows>
+                            <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                          </dataflow-arrows>
+                          <dataflow-function>
+                            Wurzel
+                          </dataflow-function>
+                          <dataflow-arrows>
+                            <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                          </dataflow-arrows>
+                          <dataflow-result>
+                            6
+                          </dataflow-result>
+                        </dataflow-diagram>
+
+                        <dataflow-diagram>
+                          <dataflow-params>
+                            <dataflow-parameter>&nbsp;</dataflow-parameter>
+                          </dataflow-params>
+                          <dataflow-arrows class="seethrough">
+                            <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                          </dataflow-arrows>
+                          <dataflow-function>
+                            Zufallszahl
+                          </dataflow-function>
+                          <dataflow-arrows>
+                            <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                          </dataflow-arrows>
+                          <dataflow-result>
+                            0.19287312340957
+                          </dataflow-result>
+                        </dataflow-diagram>
+                    </flex-container>`,
+                  image: ``,
+          
+                },
+                {
+                  title: "Term-Notation",
+                  content: `<p>Aus der Mathematik ist dir bekannt, eine Funktion oder Term so aufzuschreiben: <my-code>f(x)</my-code></p>
+                    <p>In der Informatik vergeben wir etwas aussagekräftigere Funktionsbezeichner - statt <my-code>f(x)</my-code>
+                    z. B. <my-codE>Zufallszahl()</my-code>. <br />
+                    Die leeren Klammern bedeuten hier, dass es keine Parameter gibt, also keine Eingabe nötig ist - wie oben bereits erklärt.
+                    Die Klammern bleiben aber bei einer Funktion in dieser <my-em>Term-Notation</my-em> immer.</p>
+                    <br />
+                    <p>Wahrscheinlich würdest du aber nie auf die Idee kommen, <my-code>+(1; 2)</my-code> zu schreiben - stattdessen
+                    schreibst du auch hier weiter <my-code>1 + 2</my-code>.<br />
+                    <my-code>Funktionsbezeichner(Parameter...)</my-code> ist die <my-em>Präfix-Notation</my-em> (lat. "prae": vor, 
+                    "praefigio": vorn anheften), der Funktionsbezeichner ist vorne angeheftet.<br />
+                    <my-code>Parameter1 Funktionsbezeichner Parameter2</my-code> ist die <my-em>Infix-Notation</my-em> (lat. "in": in, 
+                    "infigio": hineinheften), der Funktionsbezeichner ist zwischen die Parameter geheftet. Das geht allerdings nur für genau
+                    zwei Parameter und ist nur üblich, bei den gängigsten Funktionen, wie z. B. den Grundrechenarten.</p>
+                    <br />
+                    <p>Den Rückgabewert ordnen wir in der Term-Notation so zu: <my-code>Runden(3,141592; 2) &rarr; 3,14</my-code> oder 
+                    <my-code>35 / 5 &rarr; 7</my-code><br />
+                    Das nennen wir dann <my-em>Funktionsaufruf</my-em>. In einem TKP erfolgt ein Funktionsaufruf so: <my-code>=Funktionsbezeichner(Parameter)</p>`,
+                  image: ``,
+          
+                },
+              ],
+            },
+            {
+              _type: "multipleChoice",
+              prompt: `<flex-container>
+                  <dataflow-diagram>
+                    <dataflow-params>
+                      <dataflow-parameter>2,68</dataflow-parameter>
+                      <dataflow-parameter>1</dataflow-parameter>
+                    </dataflow-params>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-function>
+                      Runden
+                    </dataflow-function>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-result>
+                      2,7
+                    </dataflow-result>
+                  </dataflow-diagram>
+
+                  <p>Der zweite Parameter der Funktion links gibt an...</p>
+                </flex-container>`,
+              options: [
+                "wie oft gerundet wird", 
+                "was gerechnet wird", 
+                "dass der PC mit dem Speed-Multiplikator 1 arbeitet", 
+                "dass auf eine Nachkommastelle gerundet wird", 
+                "wie nah zur 1 gerundet wird", 
+                "ob auf- oder abgerundet wird", 
+              ],
+              correctOptions: [3],
+            },
+            {
+              _type: "multipleChoice",
+              prompt: `Fakultät(6) &rarr;`,
+              options: [
+                "12", 
+                "72", 
+                "720",
+                "7200",
+                "ist ein Funktionsaufruf",
+              ],
+              correctOptions: [2, 4],
             },
             {
               _type: "task",
-              number: "",
-              prompt: "",
-              content: ``,
-            },*/
+              number: "0",
+              prompt: "[Partnerarbeit]",
+              content: `Erkläre deine:r Nachbar:in folgende Begriffe:
+                <ul>
+                  <li>Funktion</li>
+                  <li>Funktionsbezeichner</li>
+                  <li>Parameter</li>
+                  <li>Präfix-Notation</li>
+                </ul>`,
+              solution: `Lies den Hefteintrag oben noch einmal.`,
+            },
+            {
+              _type: "multipleChoice",
+              prompt: "Bei Funktionen, die nur durch genau ein Symbol bezeichnet werden und zwei Parameter haben,...",
+              options: [
+                "brauchen wir Excel nicht", 
+                "bietet sich die Präfix-Notation an", 
+                "nutzen wir die Infix-Notation",
+                "trinke ich erstmal einen Kaffee",
+              ],
+              correctOptions: [2],
+            },
+            {
+              _type: "task",
+              number: "1",
+              prompt: `Datenfluss und Terme`,
+              content: `Stelle die Funktionen in deinem Heft (digital gespeichert ist auch in Ordnung) graphisch und in Term-Notation dar.
+                <ol>
+                  <li>Die Funktion <my-em>Abs</my-em> hat einen Parameter <my-em>Zahl</my-em>. Sie berechnet den Betrag (auch ABSolutbetrag) der Zahl</li>
+                  <li>Die Funktion <my-em>Zufallszahl</my-em> hat keinen Parameter. Sie liefert eine zufällige Zahl zwischen 0 und 1.</li>
+                  <li>Die Funktion <my-em>Fakultät</my-em> hat einen Parameter <my-em>Zahl</my-em>. Sie berechnet die Fakultät (!) der Zahl</li>
+                </ol>`,
+              solution: `<grid-container class="media-left">
+                  <dataflow-diagram>
+                    <dataflow-params>
+                      <dataflow-parameter>Zahl</dataflow-parameter>
+                    </dataflow-params>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-function>
+                      Abs
+                    </dataflow-function>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-result>
+                      gerundete Zahl
+                    </dataflow-result>
+                  </dataflow-diagram>
+
+                  <p><my-code>Abs(Zahl)</my-code></p>
+
+                  <dataflow-diagram>
+                    <dataflow-function>
+                      Zufallszahl
+                    </dataflow-function>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-result>
+                      zufällige Zahl
+                    </dataflow-result>
+                  </dataflow-diagram>
+
+                  <p><my-code>Zufallszahl()</my-code></p>
+
+                  <dataflow-diagram>
+                    <dataflow-params>
+                      <dataflow-parameter>Zahl</dataflow-parameter>
+                    </dataflow-params>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-function>
+                      Fakultät
+                    </dataflow-function>
+                    <dataflow-arrows>
+                      <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                    </dataflow-arrows>
+                    <dataflow-result>
+                      Fakultät Ergebnis
+                    </dataflow-result>
+                  </dataflow-diagram>
+
+                  <p><my-code>Fakultät(Zahl)</my-code></p>
+                </grid-container>`,
+            },
+            {
+              _type: "task",
+              number: "2",
+              prompt: `Funktionsaufrufe`,
+              content: `Vervollständige im Heft (oder digital gespeichert) folgende Funktionsaufrufe:
+                <ol>
+                  <li>Runden(-4,5; 0) &rarr;</li>
+                  <li>Aufrunden(-4,5; 0) &rarr;</li>
+                  <li>Abrunden(-4,5; 0) &rarr;</li>
+                  <li>6^5 &rarr;</li>
+                  <li>Pi() &rarr;</li>
+                  <li>Zufallszahl() &rarr;</li>
+                  <li>Fakultät(10) &rarr;</li>
+                </ol>`,
+              solution: `<ol>
+                  <li>Runden(-4,5; 0) &rarr; -5</li>
+                  <li>Aufrunden(-4,5; 0) &rarr; -5</li>
+                  <li>Abrunden(-4,5; 0) &rarr; -4</li>
+                  <li>6^5 &rarr; 7776</li>
+                  <li>Pi() &rarr; 3,14159265...</li>
+                  <li>Zufallszahl() &rarr; 0,2938642986234 (eine zufällige Zahl zwischen 0 und 1)</li>
+                  <li>Fakultät(10) &rarr; 3628800</li>
+                </ol>`,
+            },
+            {
+              _type: "task",
+              number: "3",
+              prompt: `Datenfluss in TKP`,
+              content: `Öffne die Datei <a href="/${base}/funktionsaufrufe.ods"><my-code>funktionsaufrufe.ods</my-code></a>.<br />
+                <ol>
+                  <li>
+                    In der Tabelle <my-em>RUNDEN</my-em> soll der Aufruf <my-code>Runden(2,56; 1) &rarr; 2,6</my-code> dargestellt werden
+                    <my-tip>
+                      Auf Runde Ecken verzichten wir hier.<br />
+                      Der Funktionsbezeichner sollte im Kasten stehen<br />
+                      Der eigentliche Funktionsaufruf erfolgt in Zelle <my-em>C11</my-em>: <my-code>=Runden(C3; F3)</my-code>
+                    </my-tip>
+                  </li>
+                  <li>
+                    Genau so sollen in den Tabellen <my-em>WURZEL</my-em>, <my-em>PI</my-em>, <my-em>+</my-em> und <my-em>ZUFALLSZAHL</my-em>
+                    die folgenden Aufrufe dargestellt werden:
+                    <flex-container>
+                      <span><my-code>Wurzel(49) &rarr; 7</my-code></span>
+                      <span><my-code>Pi() &rarr; 3,141592...</my-code></span>
+                      <span><my-code>3 + 5 &rarr; 8</my-code></span>
+                      <span><my-code>Zufallszahl() &rarr; ...?</my-code></span>
+                    </flex-container>
+                    
+                  </li>
+                </ol>`,
+            },
+            {
+              _type: "task",
+              number: "4",
+              prompt: `Funktionen vs. Funktionen`,
+              content: `Im Mathematikunterricht sind dir auch Funktionen begegnet.<br />
+                Stelle Gemeinsamkeiten und Unterschiede gegenüber.`,
+              solution: `Die Funktionen im Mathematikunterricht haben in der Regel Funktionsbezeichner wie <my-eM>f, g</my-eM> usw., die nur aus einem Buchstaben bestehen, 
+                in der Informatik nutzen wir aussagekräftigere Namen, z.B. <my-em>Runden</my-em>.
+                <br /><br />
+                Sie besitzen (im Rahmen der Schulmathematik) immer genau einen Parameter (meist <my-em>x</my-em>). <br />
+                Sie liefern ebenfalls genau ein Ergebnis, den Funktionswert. Mit <my-eM>f(x)</my-em> kommt die Termnotation (Präfixschreibweise) zur Anwendung.
+                <br /><br />
+                Als Datentyp für Ein- und Rückgabewert kommt im Mathematikunterricht nur Zahl in Frage, in der Informatik können alle möglichen Datentypen genutzt werden 
+                (z. B. auch Worte).`,
+            },
+            {
+              _type: "task",
+              number: "5",
+              prompt: `Caesar war ein schlauer Mann`,
+              content: `<p><my-em>Qrva Yruere uäggr urhgr orvanur irefpuynsra.</my-em></p>
+
+                <p>Finde heraus, was sich hinter diesem verschlüsselten Satz verbirgt, indem du die Funktion <my-code>ROT13(Text)</my-code> 
+                (geht nur in LibreOffice Calc!) anwendest. Wie arbeitet die Funktion genau?<p>`,
+              solution: `<p><my-em>Dein Lehrer hätte heute beinahe verschlafen.</my-em></p>
+
+                <p>Die Funktione nutzt eine Verschiebung (ROTation) des Alphabets um 13 Buchstaben.<p>`,
+            },
+            {
+              _type: "task",
+              number: "6",
+              prompt: `(UNI)CODES`,
+              content: `<p>Jedes Zeichen eines Textes ist im Rechner als Code gespeichert. 
+                Die Funktion <my-code>Unicode()</my-code> liefert zu einem gegebenen Zeichen den Code des standardisierten Unicode-Zeichensatzes. 
+                Umgekehrt gibt die Funktion <my-code>Unizeichen()</my-code> zu einem gegebenen Code das entsprechende Zeichen.</p>
+
+                Erstelle eine Tabelle, auf der alle Zeichen mit den Codes 32 bis ca. 12000 erscheinen.`,
+              solution: `Drei Spalten, beginnend z.B. in A1: 
+                <grid-container class="no-gap">
+                  <my-code>1</my-code>
+                  <my-code>=Unizeichen(A1)</my-code>
+                  <my-code>2</my-code>
+                  <my-code>=Unizeichen(A2)</my-code>
+                  ...
+                </grid-container>`,
+            },
+            {
+              _type: "task",
+              number: "7",
+              prompt: `Feiertage und Urlaub`,
+              content: `In LibreOffice Calc gibt es die Funktion <my-code>Ostersonntag(Jahr)</my-code>.
+                <p>Der Feiertag Christi Himmelfahrt findet immer genau 39 Tage nach dem Ostersonntag statt. Das ist immer ein Donnerstag.</p>
+
+                <p>Prof. Urlaub überlegt sich: Wenn Christi Himmelfahrt auf den 30. April fällt, dann ist am nachfolgenden Freitag, den ersten Mai 
+                ebenfalls Feiertag, so dass ein verlängertes Wochenende entsteht.
+
+                Finde mit Hilfe von Calc heraus, in welchem Jahr Prof. Urlaubs Überlegungen als nächstes eintreffen.</p>`,
+            },
+            {
+              _type: "task",
+              number: "8",
+              prompt: ``,
+              content: `<p>Jede positive reelle Zahl lässt sich in eine Summe aus einer ganzen Zahl und einem Rest zwischen 0 und 1 zerlegen. 
+                Ist dieser Rest ungleich null, so lässt er sich als Bruch mit 1 im Zähler schreiben. Den Nenner dieses Bruchs kann man wieder auf 
+                gleiche Weise in eine Summe zerlegen, deren Rest als Bruch geschrieben wird usw.</p>
+
+                <p>Führt man das Verfahren weiter fort, so entsteht ein Kettenbruch. Man spricht von der Kettenbruchentwicklung einer Zahl.</p>
+
+                <flex-container class="align-upper">
+                  <my-em>Beispiel:</my-em> Kettenbruchentwicklung für &pi; (3,141592...):<br />
+                  <img src="/${base}/kettenbruchentwicklung.png" class="colorover" />
+                </flex-container>
+                <br /><br />
+                <flex-container>
+                  <span style="max-width: 60%" >Erstelle ein Tabellendokument, in dem die Kettenbruchentwicklung einer gegebenen (veränderbaren!) Zahl berechnet wird (siehe Tabelle).
+                  Untersuche die Kettenbruchentwicklung von Quadratwurzeln natürlicher Zahlen.</span>
+                  <img src="/${base}/kettenbruchentwicklung_tabelle.png" style="max-width: 30%" />
+                </flex-container>`,
+            },
           ],
         },
       ],

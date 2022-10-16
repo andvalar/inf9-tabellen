@@ -44,8 +44,9 @@ export function MultipleChoice({ prompt, image, options:labels, correctOptions }
 }
 
 
-export function Task({ number, prompt, content, image, file }) {  
-
+export function Task({ number, prompt, content, image, file, solution }) {  
+  const [isSolutionVisible, setIsSolutionVisible] = useState(false)
+  
   return (
     <my-task>
       <prompt-line>Aufgabe { number }: { prompt }</prompt-line>
@@ -53,9 +54,12 @@ export function Task({ number, prompt, content, image, file }) {
         {image && <img src={ `/${data.name}/${image}` } />}
         {/*content.map(     SPÄTER: als array, MultipleChoice oder string
         )*/}
-        <promt-description dangerouslySetInnerHTML={{__html: content }}></promt-description>
+        <promt-description dangerouslySetInnerHTML={{__html: isSolutionVisible ? solution : content }}></promt-description>
       </flex-container>
-        {file && <a href={ `/${data.name}/${file}` }><img src={`/${data.name}/download.png`} className="dl"/>{file}</a>}
+      {file && <a href={ `/${data.name}/${file}` }><img src={`/${data.name}/download.png`} className="dl"/>{file}</a>}
+      {solution && <button onClick={() => setIsSolutionVisible(isSolutionVisible ? false : true)} className="send">
+        {isSolutionVisible ? "Aufgabe zeigen" : "Lösung zeigen"}
+      </button>}
     </my-task>
   )
 }
