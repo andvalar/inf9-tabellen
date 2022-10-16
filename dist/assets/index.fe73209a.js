@@ -63,7 +63,7 @@ Error generating stack: `+a.message+`
                 L\xF6sche eine der leeren Tabellen. Vervielf\xE4ltige dann den Inhalt deiner ersten Tabelle, 
                 indem du alles markierst (Strg+A), kopierst (Strg+C) und dann in der leeren Tabelle 
                 einf\xFCgst (Strg+V). Sortiere dann eine Spalte (Daten --> Sortieren). 
-                Blende zum Schluss eine Spalte aus.`},{_type:"task",number:"2",prompt:"Tabellengr\xF6\xDFe - Finde es heraus",content:"Finde heraus, wie viele Zeilen bzw. wie viele Spalten eine Tabelle hat."},{_type:"task",number:"3",prompt:"Diagramme in Tabellen",content:`Stelle die Informationen deiner Tabelle in verschiedenen Diagrammen dar. 
+                Blende zum Schluss eine Spalte aus.`},{_type:"task",number:"2",prompt:"Tabellengr\xF6\xDFe - Finde es heraus",content:"Finde heraus, wie viele Zeilen bzw. wie viele Spalten eine Tabelle hat.",solution:"Excel: 1048576 Zeilen/Spalten (Spalten bis <my-em>XFD</my-em>). "},{_type:"task",number:"3",prompt:"Diagramme in Tabellen",content:`Stelle die Informationen deiner Tabelle in verschiedenen Diagrammen dar. 
                 Benutze daf\xFCr das Men\xFC oben: 'Einf\xFCgen' --> Art des Diagramms`}]},{title:"Formeln",name:"formeln",content:[{_type:"intro",content:`Die bisherigen Aufgaben (eine Tabelle zu erstellen und zu formatieren), h\xE4tten wir viel einfacher auch mit 
               einem Textverarbeitungsprogramm, wie z. B. Word oder Writer, erledigen k\xF6nnen. <br /><br />
               Hier lernst du, wie du ein Tabellenkalkulationsprogramm zum automatisierten Rechnen nutzen kannst.`},{_type:"entry",title:"Formeln",content:[{title:"Zellbez\xFCge",content:`Jede Zelle ist durch Angabe der Spalte und Zeile eindeutig bestimmt.<br /><br />
@@ -163,7 +163,9 @@ Error generating stack: `+a.message+`
                   Im Folgenden ist das neue x die Mitte zwischen dem alten x und dem alten y, das neue y wird entsprechend wie oben berechnet.
                   </li>
                   <li>Erstelle in der Tabelle <my-em>Multiplikationstafel</my-em> eine gro\xDFe "1x1-Tabelle" von 1 bis 100.
-                  <my-tip><span>Tipp f:</span> Nutze gemischte Adressierung: Denke immer dar\xFCber nach, was "festgehalten" werden muss und was nicht.</my-tip></li>
+                  <my-tip><span>Tipp f:</span> Lasse A1 frei. Beginne damit, in A2,A3,.../B1,C1,... jeweils die Zahlen 1, 2,... 
+                  zeilen-/spaltenweise einzutragen.<br />
+                  Nutze gemischte Adressierung: Denke immer dar\xFCber nach, was "festgehalten" werden muss und was nicht.</my-tip></li>
                   <li>In der Tabelle <my-em>Stammbruchsumme</my-em> geht es um die Summe der ersten 1000 Stammbr\xFCche: 
                   <img src="/${$t}/stammbruchsumme.png" class="colorover" /><br />
                   Sch\xE4tze zuerst die Summe, berechne sie dann.</li>
@@ -182,7 +184,9 @@ Error generating stack: `+a.message+`
                 Untersuche in einer Tabelle, wie sich der Wert des Terms ver\xE4ndert, wenn n immer gr\xF6\xDFer wird.`},{_type:"task",number:"8",prompt:"Kettenbruch",content:`Finde heraus, was sich hinter folgendem Kettenbruch verbirgt:<br />
                 <img src="/${$t}/kettenbruch.png" class="colorover" />
                 <my-tip><span>Tipp:</span> Erstelle zuerst Tabellenspalten, in denen z.B. f\xFCr n=1,...,50 die Werte von 2n-1 und n^2 stehen.
-                Anschlie\xDFend berechnest du in einer weiteren Spalte von unten nach oben nacheinander die Nenner.</my-tip>`}]},{title:"Funktionen",name:"funktionen",content:[{_type:"intro",content:`<p>Die Berechnungen, die du bisher mithilfe von Formeln durchgef\xFChrst hast, haben sich oft aus mehreren 
+                Anschlie\xDFend berechnest du in einer weiteren Spalte von unten nach oben nacheinander die Nenner.</my-tip>`,solution:`<my-em>Pi</my-em>: (vernachl\xE4ssige in der letzten Zeile deiner Tabelle den weiteren Bruch. Vergiss nicht, die oberste Zelle (<my-em>D1</my-em>:
+                <my-code>=B1+C1/D2</my-code>) zu verrechnen:
+                <my-code>=4/D1</my-code>)`}]},{title:"Funktionen",name:"funktionen",content:[{_type:"intro",content:`<p>Die Berechnungen, die du bisher mithilfe von Formeln durchgef\xFChrst hast, haben sich oft aus mehreren 
                 Rechenschritten zusammengesetzt. 
                 Einen solchen Rechenschritt nennen wir im folgenden Funktion. Hier wirst du noch einige weitere, hilfreiche Funktionen
                 kennenlernen, um komplexere Aufgaben (oft einfacher) zu l\xF6sen.</p>
@@ -238,7 +242,7 @@ Error generating stack: `+a.message+`
                     <br />
                     <p>Du wirst feststellen, dass Funktionen unterschiedlich viele Parameter (Eingaben) annehmen. Die Grundrechenarten
                     haben immer zwei, aber z. B. um eine Zufallszahl zu erhalten, musst du nichts weiter angeben.<br />
-                    <my-em>Jede Funktion, ohne Ausnahme, hat jedoch immer genau einen R\xFCckgabewert.</my-em></p>`,image:""}]},{_type:"multipleChoice",prompt:"<my-em>'Ziehe die Wurzel aus 49.'</my-em> Hier ist 49...",options:["der Pamphlet","der R\xFCckgabewert","der Papameter","der Katheter","der Parameter"],correctOptions:[4]},{_type:"multipleChoice",prompt:"Funktionen haben...",options:["meistens zwei Parameter","einen R\xFCckgabewert","keinen R\xFCckgabewert","eine Verarbeitungsvorschrift"],correctOptions:[1,3]},{_type:"entry",title:"Funktionen und ihre Darstellungen",content:[{title:"Darstellung als Datenfluss",content:`Wie schon beim E-V-A-Prinzip stellen wir Funktionen oft "von oben nach unten" in ihre Einzelteile
+                    <my-em>Jede Funktion, ohne Ausnahme, hat jedoch immer genau einen R\xFCckgabewert.</my-em></p>`,image:""}]},{_type:"multipleChoice",prompt:"<my-em>'Ziehe die Wurzel aus 49.'</my-em> Hier ist 49...",options:["der Pamphlet","der R\xFCckgabewert","der Papameter","der Katheter","der Parameter"],correctOptions:[4]},{_type:"multipleChoice",prompt:"Was ist ein Tabellenkalkulationsprogramm?",options:["Software zum Schreiben und Designen von Tabellen","Software zum Erstellen und Verwalten von Tabellen, mit denen automatische Berechnungen gemacht werden k\xF6nnen","Software zum Zeichnen von Tabellen, in denen Informationen aus dem Internet bezogen werden"],correctOptions:[1]},{_type:"multipleChoice",prompt:"Funktionen haben...",options:["meistens zwei Parameter","einen R\xFCckgabewert","keinen R\xFCckgabewert","eine Verarbeitungsvorschrift"],correctOptions:[1,3]},{_type:"entry",title:"Funktionen und ihre Darstellungen",content:[{title:"Darstellung als Datenfluss",content:`Wie schon beim E-V-A-Prinzip stellen wir Funktionen oft "von oben nach unten" in ihre Einzelteile
                     aufgegliedert dar - die Daten "flie\xDFen" sozusagen durch die Funktion: daher der Name <my-em>Datenflussdiagramm</my-em>.
                     <br /><br />
                     <flex-container>

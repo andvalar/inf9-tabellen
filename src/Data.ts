@@ -89,7 +89,7 @@ export const data = {
                 "Samsung Tables",
                 "Apple Numbers",
               ],
-              correctOptions: [1, 2, 5],
+              correctOptions: [1, 2, 5,],
             },
             {
               _type: "entry",
@@ -127,7 +127,7 @@ export const data = {
                 "Software zum Erstellen und Verwalten von Tabellen, mit denen automatische Berechnungen gemacht werden können", 
                 "Software zum Zeichnen von Tabellen, in denen Informationen aus dem Internet bezogen werden",
               ],
-              correctOptions: [1],
+              correctOptions: [1,],
             },
             {
               _type: "task",
@@ -164,6 +164,7 @@ export const data = {
               number: "2",
               prompt: "Tabellengröße - Finde es heraus",
               content: `Finde heraus, wie viele Zeilen bzw. wie viele Spalten eine Tabelle hat.`,
+              solution: `Excel: 1048576 Zeilen/Spalten (Spalten bis <my-em>XFD</my-em>). `,
             },
             {
               _type: "task",
@@ -434,7 +435,9 @@ export const data = {
                   Im Folgenden ist das neue x die Mitte zwischen dem alten x und dem alten y, das neue y wird entsprechend wie oben berechnet.
                   </li>
                   <li>Erstelle in der Tabelle <my-em>Multiplikationstafel</my-em> eine große "1x1-Tabelle" von 1 bis 100.
-                  <my-tip><span>Tipp f:</span> Nutze gemischte Adressierung: Denke immer darüber nach, was "festgehalten" werden muss und was nicht.</my-tip></li>
+                  <my-tip><span>Tipp f:</span> Lasse A1 frei. Beginne damit, in A2,A3,.../B1,C1,... jeweils die Zahlen 1, 2,... 
+                  zeilen-/spaltenweise einzutragen.<br />
+                  Nutze gemischte Adressierung: Denke immer darüber nach, was "festgehalten" werden muss und was nicht.</my-tip></li>
                   <li>In der Tabelle <my-em>Stammbruchsumme</my-em> geht es um die Summe der ersten 1000 Stammbrüche: 
                   <img src="/${base}/stammbruchsumme.png" class="colorover" /><br />
                   Schätze zuerst die Summe, berechne sie dann.</li>
@@ -466,6 +469,9 @@ export const data = {
                 <img src="/${base}/kettenbruch.png" class="colorover" />
                 <my-tip><span>Tipp:</span> Erstelle zuerst Tabellenspalten, in denen z.B. für n=1,...,50 die Werte von 2n-1 und n^2 stehen.
                 Anschließend berechnest du in einer weiteren Spalte von unten nach oben nacheinander die Nenner.</my-tip>`,
+              solution: `<my-em>Pi</my-em>: (vernachlässige in der letzten Zeile deiner Tabelle den weiteren Bruch. Vergiss nicht, die oberste Zelle (<my-em>D1</my-em>:
+                <my-code>=B1+C1/D2</my-code>) zu verrechnen:
+                <my-code>=4/D1</my-code>)`,
             },
           ],
         },
@@ -555,18 +561,28 @@ export const data = {
                 "der Katheter", 
                 "der Parameter", 
               ],
-              correctOptions: [4],
+              correctOptions: [4,],
             },
             {
               _type: "multipleChoice",
-              prompt: "Funktionen haben...",
+              prompt: "Was ist ein Tabellenkalkulationsprogramm?",
               options: [
-                "meistens zwei Parameter", 
-                "einen Rückgabewert", 
-                "keinen Rückgabewert", 
-                "eine Verarbeitungsvorschrift", 
+                "Software zum Schreiben und Designen von Tabellen", 
+                "Software zum Erstellen und Verwalten von Tabellen, mit denen automatische Berechnungen gemacht werden können", 
+                "Software zum Zeichnen von Tabellen, in denen Informationen aus dem Internet bezogen werden",
               ],
-              correctOptions: [1, 3],
+              correctOptions: [1,],
+            },
+            {
+              _type: "multipleChoice",
+              prompt: `Funktionen haben...`,
+              options: [
+                `meistens zwei Parameter`, 
+                `einen Rückgabewert`, 
+                `keinen Rückgabewert`, 
+                `eine Verarbeitungsvorschrift`, 
+              ],
+              correctOptions: [1, 3,],
             },
             {
               _type: "entry",
