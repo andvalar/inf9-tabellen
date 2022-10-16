@@ -828,7 +828,8 @@ export const data = {
                   <li>Zufallszahl() &rarr;</li>
                   <li>Fakultät(10) &rarr;</li>
                 </ol>`,
-              solution: `<ol>
+              solution: `Vervollständige im Heft (oder digital gespeichert) folgende Funktionsaufrufe:
+                <ol>
                   <li>Runden(-4,5; 0) &rarr; -5</li>
                   <li>Aufrunden(-4,5; 0) &rarr; -5</li>
                   <li>Abrunden(-4,5; 0) &rarr; -4</li>
@@ -890,7 +891,7 @@ export const data = {
                 (geht nur in LibreOffice Calc!) anwendest. Wie arbeitet die Funktion genau?<p>`,
               solution: `<p><my-em>Dein Lehrer hätte heute beinahe verschlafen.</my-em></p>
 
-                <p>Die Funktione nutzt eine Verschiebung (ROTation) des Alphabets um 13 Buchstaben.<p>`,
+                <p>Die Funktion nutzt eine Verschiebung (ROTation) des Alphabets um 13 Buchstaben.<p>`,
             },
             {
               _type: "task",
