@@ -565,16 +565,6 @@ export const data = {
             },
             {
               _type: "multipleChoice",
-              prompt: "Was ist ein Tabellenkalkulationsprogramm?",
-              options: [
-                "Software zum Schreiben und Designen von Tabellen", 
-                "Software zum Erstellen und Verwalten von Tabellen, mit denen automatische Berechnungen gemacht werden können", 
-                "Software zum Zeichnen von Tabellen, in denen Informationen aus dem Internet bezogen werden",
-              ],
-              correctOptions: [1,],
-            },
-            {
-              _type: "multipleChoice",
               prompt: `Funktionen haben...`,
               options: [
                 `meistens zwei Parameter`, 
@@ -946,6 +936,219 @@ export const data = {
             },
           ],
         },
+        {
+          title: "Funktionen verbinden",
+          name: "funktionen-verbinden",
+          content: [  // array of entrys, tasks...
+            {
+              _type: "intro",
+              content: `<p>Für die Produktion eines Autos müssen sehr viele einzelne Arbeitsschritte in der richtigen 
+                Reihenfolge verknüpft werden. <br />
+                Ähnlich verhält es sich bei komplexeren Berechnungen, für die eine Reihe von Funktionen miteinander 
+                verknüpft werden. Hier lernst du, wie du mehrere funktionen gemeinsam nutzt und ineinander verschachtelst.</p>
+
+                <my-bsp>
+                  <h3>Beispiel: </h3>
+                  Bei einem Taxiunternehmen berechnet sich der Preis für eine Taxifahrt aus folgenden drei Werten:
+
+                  <ul>
+                    <li>dem Grundpreis in Euro, das das Taxometer bereits zu Beginn der Fahrt anzeigt</li>
+                    <li>dem Kilometerpreis in Euro</li>
+                    <li>der Länge der gefahrenen Strecke in Kilometern</li>
+                  </ul>
+                  Damit keine krummen Beträge entstehen, wird der berechnete Preis mit einer Genauigkeit von 10 Cent 
+                  aufgerundet.
+
+                  <h4>Einzelfunktionen</h4>
+                  Zur Berechnung des Taxipreises werden drei Einzelfunktionen benötigt. Das Ergebnis der ersten geht
+                  Parameterwert in die zweite ein. Deren Ergebnis geht wieder als Parameterwert in die dritte ein. 
+                  <flex-container>
+
+                    <dataflow-diagram>
+                      <dataflow-params>
+                        <dataflow-parameter>km</dataflow-parameter>
+                        <dataflow-parameter>&euro;/km</dataflow-parameter>
+                      </dataflow-params>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-function>
+                        *
+                      </dataflow-function>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-result>
+                        km-Preis;
+                      </dataflow-result>
+                    </dataflow-diagram>
+
+                    <dataflow-diagram>
+                      <dataflow-params>
+                        <dataflow-parameter>Grundpreis</dataflow-parameter>
+                        <dataflow-parameter>km-Preis</dataflow-parameter>
+                      </dataflow-params>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-function>
+                        +
+                      </dataflow-function>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-result>
+                        Gesamtpreis
+                      </dataflow-result>
+                    </dataflow-diagram>
+
+                    <dataflow-diagram>
+                      <dataflow-params>
+                        <dataflow-parameter>Gesamtpreis</dataflow-parameter>
+                        <dataflow-parameter>Kommastellen</dataflow-parameter>
+                      </dataflow-params>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-function>
+                        Aufrunden
+                      </dataflow-function>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-result>
+                        Taxipreis
+                      </dataflow-result>
+                    </dataflow-diagram>
+                  
+                  </flex-container>
+
+                  <h4>Datenflussdiagramm</h4>
+                  Alles zusammen kann in einem Datenflussdiagramm dargestellt werden:
+                  <flex-container>
+                    <dataflow-diagram>
+                      <dataflow-params>
+                        <dataflow-parameter>
+
+                          <dataflow-diagram>
+                            <dataflow-params>
+                              <dataflow-parameter>Grundpreis</dataflow-parameter>
+                              <dataflow-parameter>
+
+                                <dataflow-diagram style="width:6.5em;">
+                                  <dataflow-params>
+                                    <dataflow-parameter>km</dataflow-parameter>
+                                    <dataflow-parameter>&euro;/km</dataflow-parameter>
+                                  </dataflow-params>
+                                  <dataflow-arrows>
+                                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                                    <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                                  </dataflow-arrows>
+                                  <dataflow-function>
+                                    *
+                                  </dataflow-function>
+                                </dataflow-diagram>
+
+                              </dataflow-parameter>
+                            </dataflow-params>
+                            <dataflow-arrows>
+                              <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                              <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                            </dataflow-arrows>
+                            <dataflow-function>
+                              +
+                            </dataflow-function>
+                          </dataflow-diagram>
+
+                        </dataflow-parameter>
+                        <dataflow-parameter>Kommastellen</dataflow-parameter>
+                      </dataflow-params>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-function>
+                        Aufrunden
+                      </dataflow-function>
+                      <dataflow-arrows>
+                        <span class="arrow is-triangle arrow-bar is-bottom"></span>
+                      </dataflow-arrows>
+                      <dataflow-result>
+                        Taxipreis
+                      </dataflow-result>
+                    </dataflow-diagram>
+                  </flex-container>
+                </my-bsp>`,
+            },
+            {
+              _type: "entry",
+              title: "",
+              content: [
+                {
+                  title: "",
+                  content: ``,
+                  image: ``,
+          
+                },
+              ],
+            },
+            {
+              _type: "multipleChoice",
+              prompt: "",
+              options: [
+                "", 
+              ],
+              correctOptions: [0,],
+            },
+            {
+              _type: "task",
+              number: "",
+              prompt: ``,
+              content: ``,
+              solution: ``,
+            },
+          ],
+        },
+        /*{
+          title: "",
+          name: "",
+          content: [  // array of entrys, tasks...
+            {
+              _type: "intro",
+              content: ``,
+            },
+            {
+              _type: "entry",
+              title: "",
+              content: [
+                {
+                  title: "",
+                  content: ``,
+                  image: ``,
+          
+                },
+              ],
+            },
+            {
+              _type: "multipleChoice",
+              prompt: "",
+              options: [
+                "", 
+              ],
+              correctOptions: [0,],
+            },
+            {
+              _type: "task",
+              number: "",
+              prompt: ``,
+              content: ``,
+              solution: ``,
+            },
+          ],
+        },*/
       ],
     },
   ],

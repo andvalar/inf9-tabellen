@@ -284,6 +284,22 @@ my-bsp, my-tip {
   margin: 2em 0;
 }
 
+my-bsp li {
+  margin-bottom: 0;
+}
+
+my-bsp h3 {
+  text-align: left;
+  border:  none;
+  color: var(--foreground-special);
+  margin-bottom: 2em;
+}
+
+my-intro my-bsp {
+  border: 1px solid var(--foreground-highlight);
+  padding: 1em;
+}
+
 my-tip {
   color: var(--foreground-muted);
 }
@@ -342,6 +358,7 @@ ol ::marker {
 li {
   margin-bottom: 2em;
 }
+
 
 label {
   padding: 1em 1.2em;
@@ -484,6 +501,8 @@ dataflow-params, dataflow-result, dataflow-function {
 dataflow-params, dataflow-arrows {
   display: flex;
   justify-content: space-around;
+  align-items: flex-end;
+  gap: .8em;
 }
 
 dataflow-parameter {

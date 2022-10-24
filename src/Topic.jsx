@@ -68,7 +68,7 @@ export const LessonPage = () => {
       {/*<LessonView lesson={lesson} chapter={[topicIndex, lessonIndex]} />*/}
       
         {lesson.content.map((content, index) =>
-          <section key={index}>
+          <section key={`${topicIndex}.${lessonIndex}.${index}`}>
             <LessonSection content={content} />
           </section>
         )}
@@ -78,11 +78,11 @@ export const LessonPage = () => {
         <flex-container>
         {
           topic.content[lessonIndex - 1] &&  
-            <Link to={"/lesson/"+topic.name+"/"+topic.content[lessonIndex - 1].name}>&lt; Vorige Lektion</Link>
+            <Link to={`/lesson/${topic.name}/${topic.content[lessonIndex - 1].name}`}>&lt; Vorige Lektion</Link>
         }
         {
           topic.content[lessonIndex + 1] &&  
-            <Link to={"/lesson/"+topic.name+"/"+topic.content[lessonIndex + 1].name}>Nächste Lektion &gt;</Link>
+            <Link to={`/lesson/${topic.name}/${topic.content[lessonIndex + 1].name}`}>Nächste Lektion &gt;</Link>
         }
         
         {/*<button
